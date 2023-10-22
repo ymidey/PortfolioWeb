@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
 
-header {
+body {
+    background-color: rgb(37, 34, 34);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#hero {
     display: grid;
     place-content: center;
     height: 100vh;
@@ -14,7 +21,115 @@ h1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.char {
+#hero .char {
     transform: translateY(115px);
     transition: transform .5s;
+}
+
+nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    font-size: 1rem;
+    font-weight: 200;
+    animation: fadeInDown 1.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    transform: scale(1);
+}
+
+nav ul li {
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+nav li a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 var(--spacing, 0px);
+    transition: margin 0.25s;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .mid li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav .mid li a:hover::after {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li:active {
+    transform: scale(0.9);
+}
+
+nav .mid {
+    gap: 50px;
+}
+
+nav .left {
+    width: 20%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav .left li {
+    height: 50px;
+    padding-top: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .left img {
+    height: 35px;
+}
+
+nav .right {
+    width: 20%;
+
+}
+
+nav .right li {
+    border-radius: 5px;
+    padding: 5px 15px;
+    padding-bottom: 8px;
+    /* border: solid 2px #fff; */
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
 }
