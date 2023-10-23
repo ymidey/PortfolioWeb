@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const myTitle = new SplitType('#hero-title')
-    const myParagraphe = new SplitType('#hero-paragraphe')
-
+    const myTitleHeader = new SplitType('#hero-title')
+    const myParagrapheHeader = new SplitType('#hero-paragraphe')
 
     gsap.to('.char', {
         y: 0,
