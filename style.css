@@ -50,7 +50,7 @@ body {
 }
 
 #hero h1 {
-    font-size: 6vw;
+    font-size: 5.2vw;
     font-weight: 800;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -61,7 +61,7 @@ body {
 }
 
 #hero #hero-paragraphe {
-    font-size: 1.2cqw;
+    font-size: 1vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -222,15 +222,8 @@ nav .right li img {
     }
 }
 
-.container {
+.title-section {
     overflow: hidden;
     border: solid 2px black;
     padding-top: 3rem;
-}
-
-.title-split {
-    font-size: 8vw;
-    font-family: 'Syncopate', sans-serif;
-    margin: 0;
-    line-height: 0;
 }
