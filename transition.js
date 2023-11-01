@@ -4,11 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     gsap.to('.char', {
         y: 0,
-        stagger: 0.05,
-        delay: 0.3,
+        stagger: 0.04,
+        delay: 0.1,
         duration: .1
     })
-
 
 
 })
