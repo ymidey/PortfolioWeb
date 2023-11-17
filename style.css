@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Slab:wght@500&display=swap');
 
 /* Changement du style de la scrollbar */
 /* taille de la scrollbar */
@@ -25,10 +26,13 @@ body {
     background-color: rgb(255, 255, 255);
     color: #181616;
     margin: 0;
-    padding-left: 30px;
+    box-sizing: border-box;
     font-family: 'Syne', sans-serif;
 }
 
+section {
+    padding-left: 40px;
+}
 
 #hero {
     container-type: inline-size;
@@ -44,6 +48,8 @@ body {
     width: max-content;
     margin: 2%;
 }
+
+
 
 #hero h1 {
     font-size: 6rem;
@@ -61,6 +67,8 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+
+/* CSS de ma nav */
 nav {
     position: fixed;
     z-index: 5;
@@ -158,12 +166,14 @@ nav .right li {
     align-items: center;
 }
 
-nav .right li img {
+a img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
 }
 
+
+/* CSS de ma souris */
 #hero .scroll-downs {
     position: absolute;
     top: 0;
@@ -212,12 +222,31 @@ nav .right li img {
     }
 }
 
-section .title {
-    font-size: 3rem;
+section {
+    padding-bottom: 50px;
 }
 
-#a-propos .resume {
+section .title {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+
+h2 {
     font-size: 1.8rem;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+#a-propos .resume * {
+    font-size: 1.5rem;
+    max-width: 1100px;
+
+}
+
+
+#a-propos .resume p span {
+    font-weight: 600;
+
 }
 
 #a-propos .skills {
@@ -268,10 +297,12 @@ section .title {
 
 #projects .project-container {
     max-width: 70vw;
+    flex-wrap: wrap;
+
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    padding: 2.225em 0;
+    padding: 5em 0;
 }
 
 #projects .project-container:nth-child(odd) {
@@ -294,6 +325,12 @@ section .title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.project-link .link-right img {
+    width: 30px;
+    height: 30px;
 }
 
 #projects ul {
@@ -307,4 +344,37 @@ section .title {
     border: 2px solid black;
     padding: 5px;
     border-radius: 0.5rem;
+}
+
+footer {
+    height: 92vh;
+    background-color: #181616;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer>* {
+    padding-left: 180px;
+}
+
+footer h2 {
+    font-size: 4rem;
+}
+
+.pills-container {
+    gap: 32px;
+    display: flex;
+}
+
+.pills {
+    border: 1px #999d9e solid;
+    font-size: 1.3em;
+    padding: 2.1vh 2.1vw;
+    width: fit-content;
+    border-radius: 50px;
 }
