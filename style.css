@@ -1,19 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Slab:wght@500&display=swap');
 
-/* Couleur en mode clair */
-:root[data-theme="light"] {
-    --text: #130625;
-    --background: #f3edf8;
-    --primary: #4c06a2;
-    --secondary: #9179ac;
-    --accent: #09FB76;
-    --icons: none;
-    --fill: #10061e;
-    --icon-toggle: url('images/icons/light_mode_icon.svg');
-    --svgbackground: #b59fd3;
-}
 
+/* Thème par défaut */
 /* Couleur en mode sombre */
 :root[data-theme="dark"] {
     --text: #ece2f9;
@@ -25,6 +14,19 @@
     --fill: #ece2f9;
     --icon-toggle: url('./images/icons/dark_mode_icon.svg');
     --svgbackground: #331e4e;
+}
+
+/* Couleur en mode clair */
+:root[data-theme="light"] {
+    --text: #130625;
+    --background: #f3edf8;
+    --primary: #4c06a2;
+    --secondary: #9179ac;
+    --accent: #09FB76;
+    --icons: none;
+    --fill: #10061e;
+    --icon-toggle: url('images/icons/light_mode_icon.svg');
+    --svgbackground: #b59fd3;
 }
 
 ul {
