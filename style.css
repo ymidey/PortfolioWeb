@@ -3,14 +3,15 @@
 
 /* Couleur en mode clair */
 :root[data-theme="light"] {
-    --text: #10061e;
+    --text: #130625;
     --background: #f3edf8;
     --primary: #4c06a2;
-    --secondary: #9a84b4;
+    --secondary: #9179ac;
     --accent: #09FB76;
     --icons: none;
     --fill: #10061e;
-    --icon-toggle: url('images/icons/light_mode_icon.svg')
+    --icon-toggle: url('images/icons/light_mode_icon.svg');
+    --svgbackground: #b59fd3;
 }
 
 /* Couleur en mode sombre */
@@ -18,22 +19,12 @@
     --text: #ece2f9;
     --background: #110f13;
     --primary: #a564f5;
-    --secondary: #8e7ea3;
+    --secondary: #7e679c;
     --accent: #04F671;
     --icons: invert();
     --fill: #ece2f9;
-    --icon-toggle: url('./images/icons/dark_mode_icon.svg')
-}
-
-#theme-toggle {
-    background: var(--icon-toggle) no-repeat center center;
-    background-size: contain;
-    /* ou background-size: cover; en fonction de vos besoins */
-    border: none;
-    padding: 0;
-    width: 70px;
-    height: 70px;
-    filter: var(--icons);
+    --icon-toggle: url('./images/icons/dark_mode_icon.svg');
+    --svgbackground: #331e4e;
 }
 
 ul {
@@ -98,11 +89,12 @@ section {
     height: 100%;
     flex-direction: column;
     justify-content: end;
+    align-items: center;
 }
 
 .line-hero {
-    width: 2px;
-    height: 80%;
+    width: 1px;
+    height: 78%;
     background-color: var(--text);
     margin-right: 15px;
     margin-left: 15px;
@@ -112,6 +104,7 @@ section {
     gap: 15px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
 }
 
 #hero .hero-container {
@@ -237,6 +230,17 @@ nav .right li {
     align-items: center;
 }
 
+#theme-toggle {
+    background: var(--icon-toggle) no-repeat center center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    width: 65px;
+    height: 65px;
+    filter: var(--icons);
+    cursor: pointer;
+}
+
 a img {
     width: 40px;
     height: 40px;
@@ -253,6 +257,19 @@ a img {
     margin: auto;
     width: 34px;
     height: 55px;
+}
+
+#hero svg {
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 1200px;
+    position: absolute;
+    filter: blur(20px);
+    fill: var(--svgbackground);
+}
+
+#hero svg path {
+    max-width: 50%;
 }
 
 #hero .mousey {
@@ -309,13 +326,11 @@ h2 {
 
 #a-propos .resume * {
     font-size: 1.5rem;
-    max-width: 1100px;
-
+    max-width: 50%;
 }
 
 #a-propos .resume p span {
     font-weight: 600;
-
 }
 
 #a-propos .skills {
@@ -358,6 +373,11 @@ h2 {
     padding-right: 3%;
 }
 
+/* Ajoutez un style de base pour cacher les éléments au départ */
+.skills li {
+    opacity: 1;
+}
+
 #projects .container {
     display: flex;
     align-items: center;
@@ -370,6 +390,8 @@ h2 {
     flex-direction: row;
     gap: 5rem;
     padding: 5em 0;
+    flex-wrap: wrap;
+
 }
 
 #projects .project-container:nth-child(odd) {
