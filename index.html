@@ -17,7 +17,6 @@
                     </a>
                 </li>
             </ul>
-
             <ul class="mid">
                 <li>
                     <a href="#a-propos">
@@ -38,22 +37,28 @@
 
             <ul class="right">
                 <li>
-                    <a target="_blank" href="https://github.com/ymidey">
-                        <img src="images/icons/github-icon.webp" alt="Lien vers mon Github">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/yannick-midey/" target="_blank">
-                        <img src="./images/icons/linkedin-icon.webp" alt="Lien vers mon Linkedin">
-                    </a>
+                    <button id="theme-toggle"></button>
                 </li>
             </ul>
 
         </nav>
     </header>
     <section id="hero">
+        <div class="line-left">
+            <div class="line-hero">
+            </div>
+            <div class="line-icons">
+                <a target="_blank" href="https://github.com/ymidey">
+                    <img src="images/icons/github-icon.webp" class="icons" alt="Lien vers mon Github">
+                </a>
+
+                <a href="https://www.linkedin.com/in/yannick-midey/" target="_blank">
+                    <img src="./images/icons/linkedin-icon.webp" class="icons" alt="Lien vers mon Linkedin">
+                </a>
+            </div>
+        </div>
         <div class="hero-container">
-            <h1 id="hero-title">Yannick <span>Midey</span></h1>
+            <h1 id="hero-title"><span>Yannick</span> Midey</h1>
             <p id="hero-paragraphe">Développeur Front-End créatif <span>basé en France</span></p>
         </div>
 
@@ -65,14 +70,15 @@
     </section>
 
     <section id="a-propos">
-        <h2 class="title">À propos de moi</h2>
+        <h2 class="title">À <span class="underline">propos de moi</span></h2>
         <div class="resume">
-            <p class="reveal-type" data-bg-color="#b6b600" data-fg-color="black">
+            <p>
                 Moi c'est <span>Yannick Midey</span>, j'ai 21 ans et je suis étudiant en <span>deuxième année de
                     BUT
                     MMI (Métiers du
                     Multimédia et de
-                    l'Internet)</span> à l'université Gustave Eiffel à Champs-Sur-Marne.
+                    l'Internet)</span> parcours développement web et dispositif interactif à l'université Gustave Eiffel
+                à Champs-Sur-Marne.
                 <br><br>
                 Passionnée par le <span>design</span> et le <span>dévéloppement web</span>,j'aspire à devenir
                 <span>développeur Front-End</span> dans le but de développer des sites Web alliant
@@ -90,36 +96,35 @@
                     <th><img src="images/" alt=""> Langages</th>
                     <th>Bibliothèques et Frameworks</th>
                     <th>Base de données</th>
-                    <th>Créations numériques</th>
+                    <th>Autres</th>
                 </tr>
                 <tr>
                     <td>
                         <ul>
-                            <li><img src="./images/icons/html5.webp" alt="html icon"> HTML</li>
-                            <li><img src="./images/icons/css3-alt.svg" alt=""> CSS</li>
-                            <li> <img src="./images/icons/square-js.webp" alt="">JavaScript</li>
-                            <li> <img src="./images/icons/php.webp" alt="">PHP</li>
-                            <li> <img src="./images/icons/wordpress.webp" alt="">WordPress</li>
+                            <li><img src="./images/icons/html5.webp" alt="html icon" class="icons"> HTML</li>
+                            <li><img src="./images/icons/css3-alt.webp" alt="" class="icons"> CSS</li>
+                            <li> <img src="./images/icons/square-js.webp" alt="" class="icons">JavaScript</li>
+                            <li> <img src="./images/icons/php.webp" alt="" class="icons">PHP</li>
                         </ul>
                     </td>
                     <td>
                         <ul>
-                            <li> <img src="./images/icons/react.webp" alt="">React</li>
-                            <li><img src="./images/icons/node-js.webp" alt="" srcset="">Node.js</li>
-                            <li><img src="./images/icons/Greensock-icon.webp" alt="">GreenSock</li>
-                            <li><img src="./images/icons/D3-icon.png" alt="" srcset="">D3.js</li>
+                            <li> <img src="./images/icons/react.webp" alt="" class="icons">React</li>
+                            <li><img src="./images/icons/node-js.webp" alt="" srcset="" class="icons">Node.js</li>
+                            <li><img src="./images/icons/Greensock-icon.webp" alt="" class="icons">GreenSock</li>
+                            <li><img src="./images/icons/d3-js.webp" alt="" srcset="" class="icons">D3.js</li>
                         </ul>
                     </td>
                     <td>
                         <ul>
-                            <li><img src="./images/icons/mysql-icon.webp" alt="">MySQL</li>
+                            <li><img src="./images/icons/mysql.webp" alt="" class="icons">MySQL</li>
                         </ul>
                     </td>
                     <td>
                         <ul>
-                            <li><img src="./images/icons/figma.svg" alt="">Figma</li>
-                            <li><img src="./images/icons/Adobe_After_Effects_icon.svg.png" alt="">Adobe AfterEffect</li>
-                            <li><img src="./images/icons/Adobe_Illustrator_CC_icon.svg.png" alt="">Adobe Illustrator
+                            <li><img src="./images/icons/figma.webp" alt="" class="icons">Figma</li>
+                            <li><img src="./images/icons/github-icon.webp" alt="" class="icons">Git & Github</li>
+                            <li><img src="./images/icons/wordpress.webp" alt="" class="icons">WordPress
                             </li>
                         </ul>
                     </td>
@@ -128,7 +133,7 @@
     </section>
 
     <section id="projects">
-        <h2 class="title">Mes projets</h2>
+        <h2 class="title">Mes <span class="underline">projets</span></h2>
         <div class="container">
             <div class="project-container">
                 <div class="container-left">
@@ -157,11 +162,11 @@
                         </div>
                         <div class="link-right">
                             <a href="https://github.com/ymidey/Crystal-Viz" target="_blank" rel="noopener noreferrer"
-                                title="Voir le projet sur Github"><img src="./images/icons/github-icon-black.webp"
-                                    alt="Voir le projet sur Github" srcset=""></a>
+                                title="Voir le projet sur Github"><img src="./images/icons/github-icon.webp"
+                                    alt="Voir le projet sur Github" srcset="" class="icons"></a>
                             <a href="http://ymidey.github.io/Crystal-Viz/" target="_blank" rel="noopener noreferrer"
                                 title="Voir le projet en ligne"><img src="./images/icons/LinkWeb.webp"
-                                    alt="Voir le projet en ligne" srcset=""></a>
+                                    alt="Voir le projet en ligne" srcset="" class="icons"></a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +193,7 @@
 
                             <a href="https://www.figma.com/file/Z4ptXoBskabnVDd1fxh0il/TP_R%C3%A9f%C3%A9rencement?type=design&node-id=0%3A1&mode=design&t=MNWPyNP1Dh7wuAlN-1"
                                 target="_blank" rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" srcset=""></a>
+                                    src="./images/icons/LinkWeb.webp" srcset="" class="icons"></a>
                         </div>
                     </div>
                 </div>
@@ -215,7 +220,8 @@
                         <div class="link-right">
                             <a href="http://https://ymidey.github.io/Crystal-Viz/" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""></a>
+                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""
+                                    class="icons"></a>
                         </div>
                     </div>
                 </div>
@@ -250,43 +256,12 @@
                         </div>
                         <div class="link-right">
                             <a href="https://github.com/ymidey/Crystal-Viz" target="_blank" rel="noopener noreferrer"
-                                title="Voir le projet sur Github"><img src="./images/icons/github-icon-black.webp"
-                                    alt="Voir le projet sur Github" srcset=""></a>
+                                title="Voir le projet sur Github"><img src="./images/icons/github-icon.webp"
+                                    alt="Voir le projet sur Github" srcset="" class="icons"></a>
                             <a href="http://https://ymidey.github.io/Crystal-Viz/" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="container-left">
-                    <img src="./images/Pixel4Charity.png" alt="" srcset="">
-                </div>
-                <div class="container-right">
-                    <h3>Pixel4Charity</h3>
-                    <ul>
-                        <li>Wordpress</li>
-                    </ul>
-                    <p>Réalisation d'un site internet à l'aide du CMS Wordpress qui avait pour but d'ajouter une
-                        précense en
-                        ligne à un projet de charité fictif nommé Pixel4Charity. Le site internet devait permettre de
-                        faire
-                        connaitre à l'utilisateur, l'association défendu par le projet et le projet qui allait être
-                        réalisé
-                        pour
-                        récolté des dons.</p>
-                    <div class="project-link">
-                        <div class="link-left">
-                            <a href="#">En apprendre plus</a>
-                        </div>
-                        <div class="link-right">
-                            <a href="https://github.com/ymidey/Crystal-Viz" target="_blank" rel="noopener noreferrer"
-                                title="Voir le projet sur Github"><img src="./images/icons/github-icon-black.webp"
-                                    alt="Voir le projet sur Github" srcset=""></a>
-                            <a href="http://https://ymidey.github.io/Crystal-Viz/" target="_blank"
-                                rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""></a>
+                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""
+                                    class="icons"></a>
                         </div>
                     </div>
                 </div>
@@ -311,11 +286,12 @@
                         </div>
                         <div class="link-right">
                             <a href="https://github.com/ymidey/Crystal-Viz" target="_blank" rel="noopener noreferrer"
-                                title="Voir le projet sur Github"><img src="./images/icons/github-icon-black.webp"
-                                    alt="Voir le projet sur Github" srcset=""></a>
+                                title="Voir le projet sur Github"><img src="./images/icons/github-icon.webp"
+                                    alt="Voir le projet sur Github" srcset="" class="icons"></a>
                             <a href="http://https://ymidey.github.io/Crystal-Viz/" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""></a>
+                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""
+                                    class="icons"></a>
                         </div>
                     </div>
                 </div>
@@ -325,7 +301,7 @@
 
     <footer>
         <div class="footer-title">
-            <h2>Me contacter</h2>
+            <h2>Me <span class="underline">contacter</span></h2>
         </div>
         <div>
             <p>Je recherche activement un poste de stagiaire développeur front-end ou dans la conception de dispositifs
@@ -339,10 +315,10 @@
         <div>
             <a href="./files/CV_Yannick_MIDEY.pdf" target="_blank">Mon CV</a>
             <a target="_blank" href="https://github.com/ymidey">
-                <img src="images/icons/github-icon.webp" alt="Lien vers mon Github">
+                <img src="images/icons/github-icon.webp" alt="Lien vers mon Github" class="icons">
             </a>
             <a href="https://www.linkedin.com/in/yannick-midey/" target="_blank">
-                <img src="./images/icons/linkedin-icon.webp" alt="Lien vers mon Linkedin">
+                <img src="./images/icons/linkedin-icon.webp" alt="Lien vers mon Linkedin" class="icons">
             </a>
         </div>
 
@@ -351,8 +327,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"></script>
     <script src="transition.js">
-
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

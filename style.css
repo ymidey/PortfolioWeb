@@ -1,6 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Slab:wght@500&display=swap');
 
+/* Couleur en mode clair */
+:root[data-theme="light"] {
+    --text: #10061e;
+    --background: #f3edf8;
+    --primary: #4c06a2;
+    --secondary: #9a84b4;
+    --accent: #09FB76;
+    --icons: none;
+    --fill: #10061e;
+    --icon-toggle: url('images/icons/light_mode_icon.svg')
+}
+
+/* Couleur en mode sombre */
+:root[data-theme="dark"] {
+    --text: #ece2f9;
+    --background: #110f13;
+    --primary: #a564f5;
+    --secondary: #8e7ea3;
+    --accent: #04F671;
+    --icons: invert();
+    --fill: #ece2f9;
+    --icon-toggle: url('./images/icons/dark_mode_icon.svg')
+}
+
+#theme-toggle {
+    background: var(--icon-toggle) no-repeat center center;
+    background-size: contain;
+    /* ou background-size: cover; en fonction de vos besoins */
+    border: none;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    filter: var(--icons);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 /* Changement du style de la scrollbar */
 /* taille de la scrollbar */
 ::-webkit-scrollbar {
@@ -9,7 +49,7 @@
 
 /* couleur de fond secondaire de la scrollbar */
 ::-webkit-scrollbar-track {
-    background: #161413;
+    background: #232027;
 }
 
 /* couleur de fond primaire de la scrollbar */
@@ -22,39 +62,75 @@
     background: #d8d7d7;
 }
 
+.icons {
+    filter: var(--icons);
+}
+
+a {
+    color: var(--primary);
+    font-size: 800;
+}
+
 body {
-    background-color: rgb(255, 255, 255);
-    color: #181616;
+    background-color: var(--background);
+    color: var(--text);
     margin: 0;
     box-sizing: border-box;
     font-family: 'Syne', sans-serif;
 }
 
 section {
-    padding-left: 40px;
+    padding: 0 40px;
 }
 
 #hero {
-    container-type: inline-size;
-    display: grid;
+    display: flex;
+    align-items: center;
     place-content: center;
     height: 100vh;
     position: relative;
     justify-content: start;
 }
 
-#hero>:first-child>* {
+.line-left {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.line-hero {
+    width: 2px;
+    height: 80%;
+    background-color: var(--text);
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.line-icons {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero .hero-container {
     text-transform: uppercase;
     width: max-content;
     margin: 2%;
 }
 
-
-
-#hero h1 {
+#hero-title {
     font-size: 6rem;
     font-weight: 800;
+    color: var(--text);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    margin: 0;
+    padding: 0;
+}
+
+#hero-title span {
+    color: var(--primary);
 }
 
 #hero .char {
@@ -78,7 +154,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: .7% 2% 0 2%;
-    font-size: 1.2vw;
+    font-size: 1.4rem;
     font-weight: 800;
     animation: fadeInDown 1.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -110,7 +186,7 @@ nav .mid li a::after {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #000000;
+    background-color: var(--primary);
     margin-top: 5px;
     transition: width 0.3s ease-in-out;
 }
@@ -148,10 +224,6 @@ nav .left img {
     height: 35px;
 }
 
-nav img {
-    filter: invert();
-}
-
 nav .right {
     width: 20%;
 }
@@ -160,7 +232,6 @@ nav .right li {
     border-radius: 5px;
     padding: 5px 15px;
     padding-bottom: 8px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,8 +243,7 @@ a img {
     border-radius: 5px;
 }
 
-
-/* CSS de ma souris */
+/* CSS de mon indicateur de scroll */
 #hero .scroll-downs {
     position: absolute;
     top: 0;
@@ -189,7 +259,8 @@ a img {
     width: 3px;
     padding: 9px 14px;
     height: 35px;
-    border: 2px solid #000000;
+    border: 2px solid;
+    border-color: var(--secondary);
     border-radius: 25px;
     opacity: 0.75;
     box-sizing: content-box;
@@ -199,7 +270,7 @@ a img {
     width: 3px;
     height: 10px;
     border-radius: 25%;
-    background-color: #000000;
+    background-color: var(--secondary);
     animation-name: scroll;
     animation-duration: 2.2s;
     animation-timing-function: cubic-bezier(.15, .41, .69, .94);
@@ -226,14 +297,13 @@ section {
     padding-bottom: 50px;
 }
 
-section .title {
-    font-size: 4rem;
+section .title, footer h2 {
+    font-size: 2.8rem;
     text-transform: uppercase;
 }
 
-
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: 'Roboto Slab', sans-serif;
 }
 
@@ -242,7 +312,6 @@ h2 {
     max-width: 1100px;
 
 }
-
 
 #a-propos .resume p span {
     font-weight: 600;
@@ -271,7 +340,8 @@ h2 {
 
 #a-propos .skills h3 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: 80px;
 }
 
 #a-propos ul {
@@ -296,9 +366,6 @@ h2 {
 }
 
 #projects .project-container {
-    max-width: 70vw;
-    flex-wrap: wrap;
-
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -312,6 +379,8 @@ h2 {
 #projects .container-right {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+
 }
 
 #projects .container-right h3 {
@@ -337,19 +406,18 @@ h2 {
     display: flex;
     gap: 32px;
     margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 #projects li {
-    border: 2px solid black;
+    border: 2px solid #f3eeee;
     padding: 5px;
     border-radius: 0.5rem;
 }
 
 footer {
     height: 92vh;
-    background-color: #181616;
-    color: white;
     display: flex;
     flex-direction: column;
 }
@@ -362,9 +430,6 @@ footer>* {
     padding-left: 180px;
 }
 
-footer h2 {
-    font-size: 4rem;
-}
 
 .pills-container {
     gap: 32px;
@@ -372,9 +437,26 @@ footer h2 {
 }
 
 .pills {
-    border: 1px #999d9e solid;
+    border: 1px var(--secondary) solid;
     font-size: 1.3em;
     padding: 2.1vh 2.1vw;
     width: fit-content;
     border-radius: 50px;
+}
+
+
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 3px;
+    left: 0.5ch;
+    width: 100%;
+    transform-origin: left;
+    height: 33%;
+    background: var(--primary);
 }
