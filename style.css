@@ -3,6 +3,18 @@
 
 
 /* Thème par défaut */
+:root {
+    --text: #ece2f9;
+    --background: #110f13;
+    --primary: #a564f5;
+    --secondary: #7e679c;
+    --accent: #04F671;
+    --icons: invert();
+    --fill: #ece2f9;
+    --icon-toggle: url('./images/icons/dark_mode_icon.svg');
+    --svgbackground: #331e4e;
+}
+
 /* Couleur en mode sombre */
 :root[data-theme="dark"] {
     --text: #ece2f9;
@@ -37,7 +49,7 @@ ul {
 /* Changement du style de la scrollbar */
 /* taille de la scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 9px;
 }
 
 /* couleur de fond secondaire de la scrollbar */
@@ -57,6 +69,7 @@ ul {
 
 .icons {
     filter: var(--icons);
+    fill: #09FB76;
 }
 
 a {
@@ -70,11 +83,13 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Syne', sans-serif;
+    overflow-x: hidden;
 }
 
 section {
-    padding: 0 40px;
+    margin: 0 0 250px 40px;
 }
+
 
 #hero {
     display: flex;
@@ -107,6 +122,15 @@ section {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+}
+
+.line-icons a {
+    text-decoration: none;
+}
+
+.line-icons i {
+    font-size: 2.3rem;
+    color: var(--text);
 }
 
 #hero .hero-container {
@@ -180,7 +204,7 @@ nav .mid li a::after {
     position: absolute;
     bottom: -5px;
     width: 0;
-    height: 2px;
+    height: 3px;
     background-color: var(--primary);
     margin-top: 5px;
     transition: width 0.3s ease-in-out;
@@ -249,29 +273,32 @@ a img {
     border-radius: 5px;
 }
 
-/* CSS de mon indicateur de scroll */
-#hero .scroll-downs {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: -80vh;
-    left: 0;
-    margin: auto;
-    width: 34px;
-    height: 55px;
-}
-
-#hero svg {
-    left: 50%;
+#hero #animate-background {
     transform: translate(-50%);
-    max-width: 1200px;
+    max-width: 1100px;
     position: absolute;
+    z-index: -100;
     filter: blur(20px);
     fill: var(--svgbackground);
+    pointer-events: none;
+    transform: none;
+    transition: transform 12000ms ease-out;
+    padding: 2px;
 }
 
 #hero svg path {
     max-width: 50%;
+}
+
+/* CSS de mon indicateur de scroll */
+#hero .scroll-downs {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    left: 0;
+    margin: auto;
+    width: 34px;
+    height: 55px;
 }
 
 #hero .mousey {
@@ -312,10 +339,6 @@ a img {
     }
 }
 
-section {
-    padding-bottom: 50px;
-}
-
 section .title, footer h2 {
     font-size: 2.8rem;
     text-transform: uppercase;
@@ -340,7 +363,22 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 100px;
+}
+
+
+.skills th {
+    font-weight: 700;
+}
+
+.skills li {
+    font-size: 1.4rem;
+}
+
+.skills ul>li:nth-child(odd)>i {
+    background: linear-gradient(53deg, var(--primary) 35%, var(--accent)100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 #a-propos table {
@@ -372,10 +410,9 @@ h2 {
 
 #a-propos li img {
     width: 20px;
-    padding-right: 3%;
+    margin-right: 3%;
 }
 
-/* Ajoutez un style de base pour cacher les éléments au départ */
 .skills li {
     opacity: 1;
 }
@@ -393,7 +430,7 @@ h2 {
     gap: 5rem;
     padding: 5em 0;
     flex-wrap: wrap;
-
+    opacity: 1;
 }
 
 #projects .project-container:nth-child(odd) {
@@ -435,7 +472,7 @@ h2 {
 }
 
 #projects li {
-    border: 2px solid #f3eeee;
+    border: 2px solid var(--secondary);
     padding: 5px;
     border-radius: 0.5rem;
 }

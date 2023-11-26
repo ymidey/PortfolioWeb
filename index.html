@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yannick Midey - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
@@ -44,11 +45,11 @@
         </nav>
     </header>
     <section id="hero">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="background">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="animate-background">
             <path fill=" hsl(var(--primary) / 0.12)"
                 d="M65.2,-21.4C72.4,1,57.8,30.3,34.8,46.6C11.9,63,-19.5,66.6,-40.7,52.1C-62,37.6,-73,5.1,-64.5,-19C-56.1,-43.1,-28,-58.9,0.5,-59.1C29,-59.2,57.9,-43.7,65.2,-21.4Z"
-                transform="translate(100 100)">
-                <animate attributeName="d" dur="35000ms" repeatCount="indefinite"
+                transform="translate(100 100)" class="blob">
+                <animate attributeName="d" dur="40000ms" repeatCount="indefinite"
                     values=" M56.2,-65C70.3,-55.3,77.2,-35,78.7,-15.5C80.3,4.1,76.5,23,66.8,37.5C57.2,52,41.7,62,24.7,68.5C7.7,75,-10.9,77.9,-24.3,71.1C-37.7,64.3,-46,47.8,-46.5,33.4C-47,19,-39.7,6.6,-40.7,-10.6C-41.8,-27.9,-51.2,-50.1,-45.8,-61.3C-40.4,-72.5,-20.2,-72.7,0.5,-73.2C21.1,-73.8,42.2,-74.6,56.2,-65Z;  M36.9,-37.5C52,-31.3,71.3,-23.6,76.2,-11.2C81.1,1.3,71.5,18.5,58,25.6C44.5,32.7,27.1,29.7,14.4,30.2C1.8,30.7,-6.2,34.8,-21.1,38C-35.9,41.2,-57.8,43.6,-64.3,35.5C-70.9,27.5,-62.3,9,-56.9,-8C-51.4,-24.9,-49.2,-40.4,-40.2,-47.7C-31.3,-54.9,-15.6,-54,-2.4,-51.2C10.9,-48.3,21.8,-43.7,36.9,-37.5Z;  M56.8,-57.7C72.9,-54.2,84.8,-35.6,84.9,-17.5C85,0.5,73.4,18.1,61.4,32.1C49.4,46.2,36.9,56.6,24.3,57C11.7,57.4,-1.1,47.7,-10.1,39.4C-19.1,31,-24.4,24.1,-35.7,15.4C-47,6.7,-64.3,-3.9,-68.9,-18.1C-73.5,-32.4,-65.5,-50.4,-51.9,-54.4C-38.3,-58.4,-19.2,-48.2,0.6,-49C20.4,-49.7,40.7,-61.2,56.8,-57.7Z;  M34.8,-36.3C47.1,-31.1,60.4,-22.1,58.7,-13.1C56.9,-4.2,40.1,4.6,32.4,19.5C24.8,34.5,26.3,55.5,18.1,65C10,74.6,-7.9,72.7,-17.2,62.6C-26.4,52.6,-27,34.3,-32.8,20.7C-38.6,7.1,-49.5,-1.8,-54.6,-15.9C-59.6,-30.1,-58.8,-49.6,-48.7,-55.1C-38.6,-60.7,-19.3,-52.4,-4,-47.6C11.2,-42.8,22.5,-41.5,34.8,-36.3Z;  M49.4,-59.6C64.6,-46.2,77.8,-31.1,76.7,-16.6C75.7,-2,60.3,12,47.4,20.8C34.4,29.5,23.9,33.1,14.3,34.4C4.8,35.7,-3.8,34.8,-12.7,32.5C-21.6,30.3,-30.9,26.7,-45.2,18.2C-59.5,9.7,-78.9,-3.8,-82.8,-20.3C-86.7,-36.7,-75,-56.1,-58.6,-69.4C-42.3,-82.7,-21.1,-89.8,-2,-87.4C17.1,-85,34.2,-73.1,49.4,-59.6Z;  M56.2,-65C70.3,-55.3,77.2,-35,78.7,-15.5C80.3,4.1,76.5,23,66.8,37.5C57.2,52,41.7,62,24.7,68.5C7.7,75,-10.9,77.9,-24.3,71.1C-37.7,64.3,-46,47.8,-46.5,33.4C-47,19,-39.7,6.6,-40.7,-10.6C-41.8,-27.9,-51.2,-50.1,-45.8,-61.3C-40.4,-72.5,-20.2,-72.7,0.5,-73.2C21.1,-73.8,42.2,-74.6,56.2,-65Z; ">
                 </animate>
             </path>
@@ -58,12 +59,10 @@
             </div>
             <div class="line-icons">
                 <a target="_blank" href="https://github.com/ymidey">
-                    <img src="images/icons/github-icon.webp" class="icons" alt="Lien vers mon Github">
-                </a>
+                    <i class="devicon-github-original"></i> </a>
 
                 <a href="https://www.linkedin.com/in/yannick-midey/" target="_blank">
-                    <img src="./images/icons/linkedin-icon.webp" class="icons" alt="Lien vers mon Linkedin">
-                </a>
+                    <i class="devicon-linkedin-plain"></i> </a>
             </div>
         </div>
         <div class="hero-container">
@@ -110,30 +109,29 @@
                 <tr>
                     <td>
                         <ul>
-                            <li><img src="./images/icons/html5.webp" alt="html icon" class="icons"> HTML</li>
-                            <li><img src="./images/icons/css3-alt.webp" alt="" class="icons"> CSS</li>
-                            <li> <img src="./images/icons/square-js.webp" alt="" class="icons">JavaScript</li>
-                            <li> <img src="./images/icons/php.webp" alt="" class="icons">PHP</li>
+                            <li><i class="devicon-html5-plain"></i> HTML</li>
+                            <li><i class="devicon-css3-plain"></i> CSS</li>
+                            <li><i class="devicon-javascript-plain"></i> JavaScript</li>
+                            <li><i class="devicon-php-plain"></i> PHP</li>
                         </ul>
                     </td>
                     <td>
                         <ul>
-                            <li> <img src="./images/icons/react.webp" alt="" class="icons">React</li>
-                            <li><img src="./images/icons/node-js.webp" alt="" srcset="" class="icons">Node.js</li>
-                            <li><img src="./images/icons/Greensock-icon.webp" alt="" class="icons">GreenSock</li>
-                            <li><img src="./images/icons/d3-js.webp" alt="" srcset="" class="icons">D3.js</li>
+                            <li><i class="devicon-bootstrap-plain"></i> BootStrap</li>
+                            <li><img src="./images/icons/Greensock-icon.svg" alt="" class="icons"> GreenSock</li>
+                            <li><i class="devicon-d3js-plain"></i> D3.js</li>
                         </ul>
                     </td>
                     <td>
                         <ul>
-                            <li><img src="./images/icons/mysql.webp" alt="" class="icons">MySQL</li>
+                            <li><i class="devicon-mysql-plain"></i> MySQL</li>
                         </ul>
                     </td>
                     <td>
                         <ul>
-                            <li><img src="./images/icons/figma.webp" alt="" class="icons">Figma</li>
-                            <li><img src="./images/icons/github-icon.webp" alt="" class="icons">Git & Github</li>
-                            <li><img src="./images/icons/wordpress.webp" alt="" class="icons">WordPress
+                            <li><i class="devicon-figma-plain"></i> Figma</li>
+                            <li><i class="devicon-github-original"></i> Git & Github</li>
+                            <li><i class="devicon-wordpress-plain"></i> WordPress
                             </li>
                         </ul>
                     </td>
@@ -172,38 +170,11 @@
                         </div>
                         <div class="link-right">
                             <a href="https://github.com/ymidey/Crystal-Viz" target="_blank" rel="noopener noreferrer"
-                                title="Voir le projet sur Github"><img src="./images/icons/github-icon.webp"
+                                title="Voir le projet sur Github"><img src="./images/icons/github-icon.svg"
                                     alt="Voir le projet sur Github" srcset="" class="icons"></a>
                             <a href="http://ymidey.github.io/Crystal-Viz/" target="_blank" rel="noopener noreferrer"
-                                title="Voir le projet en ligne"><img src="./images/icons/LinkWeb.webp"
+                                title="Voir le projet en ligne"><img src="./images/icons/LinkWeb.svg"
                                     alt="Voir le projet en ligne" srcset="" class="icons"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="container-left">
-                    <img src="./images/UsCarsLegends.png" alt="" srcset="">
-                </div>
-                <div class="container-right">
-                    <h3>US Cars Legends - Maquette de site </h3>
-                    <ul>
-                        <li>Figma</li>
-                    </ul>
-                    <p>Réalisation d'une maquette d'un site internet pour un garage fictif qui vends des voitures
-                        américaines en
-                        France. Le but du projet était de réalisé la maquette d'un article du site pour qu'il soit le
-                        mieux
-                        référencer sur Google.</p>
-                    <div class="project-link">
-                        <div class="link-left">
-                            <a href="#">En apprendre plus</a>
-                        </div>
-                        <div class="link-right">
-
-                            <a href="https://www.figma.com/file/Z4ptXoBskabnVDd1fxh0il/TP_R%C3%A9f%C3%A9rencement?type=design&node-id=0%3A1&mode=design&t=MNWPyNP1Dh7wuAlN-1"
-                                target="_blank" rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" srcset="" class="icons"></a>
                         </div>
                     </div>
                 </div>
@@ -213,16 +184,19 @@
                     <img src="./images/NekoLight.png" alt="" srcset="">
                 </div>
                 <div class="container-right">
-                    <h3>Echo de l'Ultime Fansy - Maquette de site</h3>
+                    <h3>Écho de l'Ultime Fantasy - Maquette de site</h3>
                     <ul>
                         <li>Figma</li>
                     </ul>
-                    <p>Lors d'une campagne de communication institutionnel multi-plateform pour valoriser l'attractivité
+                    <p>Lors d'une campagne de communication institutionnel multi-plateforme pour valoriser
+                        l'attractivité
                         touristique d'une
-                        commune au travers un événement culturel, j'ai eu pour mission la réalision de la maquette du
+                        commune au travers un événement culturel, j'ai eu pour mission de réaliser la maquette du
                         site
-                        internet. Le site internet avait pour but de communiquer sur le concert du collecttif Neko Light
-                        Orchestra qui allait se jouer à la salle de concert l'Escale à Melun.</p>
+                        internet. Le site internet avait pour but de communiquer sur le prochain concert du collecttif
+                        Neko Light
+                        Orchestra nommé "Echo de l'Ultime Fanasy" qui allait se jouer à la salle de spectacle l'Escale à
+                        Melun.</p>
                     <div class="project-link">
                         <div class="link-left">
                             <a href="#">En apprendre plus</a>
@@ -230,7 +204,7 @@
                         <div class="link-right">
                             <a href="https://www.figma.com/file/bB8aQrn24AemoaTF8wziVe/ProjetDeCommunication_EchoDeL'ultimeFantasy?type=design&node-id=0%3A1&mode=design&t=7LTioxAgr8qyV3lz-1"
                                 target="_blank" rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""
+                                    src="./images/icons/LinkWeb.svg" alt="Voir le projet en ligne" srcset=""
                                     class="icons"></a>
                         </div>
                     </div>
@@ -267,11 +241,39 @@
                         <div class="link-right">
                             <a href="https://github.com/ymidey/ResaWeb_DonjonDuKraken" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet sur Github"><img
-                                    src="./images/icons/github-icon.webp" alt="Voir le projet sur Github" srcset=""
+                                    src="./images/icons/github-icon.svg" alt="Voir le projet sur Github" srcset=""
                                     class="icons"></a>
                             <a href="https://resaweb.midey.butmmi.o2switch.site/" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""
+                                    src="./images/icons/LinkWeb.svg" alt="Voir le projet en ligne" srcset=""
+                                    class="icons"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="container-left">
+                    <img src="./images/UsCarsLegends.png" alt="" srcset="">
+                </div>
+                <div class="container-right">
+                    <h3>US Cars Legends - Maquette de site </h3>
+                    <ul>
+                        <li>Figma</li>
+                    </ul>
+                    <p>Réalisation d'une maquette d'un site internet pour un garage fictif qui vends des voitures
+                        américaines en
+                        France. Le but du projet était de réalisé la maquette d'un article du site pour qu'il soit le
+                        mieux
+                        référencer sur Google.</p>
+                    <div class="project-link">
+                        <div class="link-left">
+                            <a href="#">En apprendre plus</a>
+                        </div>
+                        <div class="link-right">
+
+                            <a href="https://www.figma.com/file/Z4ptXoBskabnVDd1fxh0il/TP_R%C3%A9f%C3%A9rencement?type=design&node-id=0%3A1&mode=design&t=MNWPyNP1Dh7wuAlN-1"
+                                target="_blank" rel="noopener noreferrer" title="Voir le projet en ligne"><img
+                                    src="./images/icons/LinkWeb.svg" alt="voir le projet en ligne" srcset=""
                                     class="icons"></a>
                         </div>
                     </div>
@@ -298,11 +300,11 @@
                         <div class="link-right">
                             <a href="https://github.com/ymidey/Portrait_Chinois" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet sur Github"><img
-                                    src="./images/icons/github-icon.webp" alt="Voir le projet sur Github" srcset=""
+                                    src="./images/icons/github-icon.svg" alt="Voir le projet sur Github" srcset=""
                                     class="icons"></a>
                             <a href="https://ymidey.github.io/Portrait_Chinois/" target="_blank"
                                 rel="noopener noreferrer" title="Voir le projet en ligne"><img
-                                    src="./images/icons/LinkWeb.webp" alt="Voir le projet en ligne" srcset=""
+                                    src="./images/icons/LinkWeb.svg" alt="Voir le projet en ligne" srcset=""
                                     class="icons"></a>
                         </div>
                     </div>
@@ -327,10 +329,10 @@
         <div>
             <a href="./files/CV_Yannick_MIDEY.pdf" target="_blank">Mon CV</a>
             <a target="_blank" href="https://github.com/ymidey">
-                <img src="images/icons/github-icon.webp" alt="Lien vers mon Github" class="icons">
+                <img src="images/icons/github-icon.svg" alt="Lien vers mon Github" class="icons">
             </a>
             <a href="https://www.linkedin.com/in/yannick-midey/" target="_blank">
-                <img src="./images/icons/linkedin-icon.webp" alt="Lien vers mon Linkedin" class="icons">
+                <img src="./images/icons/linkedin-icon.svg" alt="Lien vers mon Linkedin" class="icons">
             </a>
         </div>
 
@@ -340,9 +342,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
         integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="transition.js">
-    </script>
+
     <script src="script.js"></script>
+
+    <script src="transition.js"></script>
+
+
+
+
 </body>
 
 </html>

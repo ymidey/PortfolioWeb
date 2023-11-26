@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Récupère le thème actuel dans le stockage local (s'il y en a un)
+    // Récupération du thème actuel dans le stockage local (s'il y en a un)
     let currentTheme = localStorage.getItem('theme') || 'light';
 
-    // Applique le thème actuel
+    // Application du thème actuel
     document.documentElement.setAttribute('data-theme', currentTheme);
 
-    // Sélectionne le bouton de commutation de thème (ajustez le sélecteur en fonction de votre HTML)
+    // Selection du bouton de toggle du thème
     const themeToggle = document.getElementById('theme-toggle');
 
-    // Ajoute un écouteur d'événements pour le bouton de commutation de thème
+    // Ajout d'un écouteur d'événement "click" sur le bouton
     themeToggle.addEventListener('click', function () {
         // Bascule entre les thèmes
         let newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Enregistre le thème actuel dans le stockage local
         localStorage.setItem('theme', newTheme);
 
-        // Met à jour la variable du thème actuel
+        // Mise à jour de la variable du thème actuel
         currentTheme = newTheme;
     });
+
+
+    // Utilisation de SplitType pour animé chaque charactère de mon titre et sous-titre
+    const myTitleHeader = new SplitType('#hero-title')
+    const myParagrapheHeader = new SplitType('#hero-paragraphe')
 });
