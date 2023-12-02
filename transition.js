@@ -94,20 +94,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animation de ma section projet
     const projects = document.querySelectorAll(".project-container");
 
-    projects.forEach((project) => {
-        const animation = gsap.from(project, {
-            opacity: 0,
-            stagger: 0.1,
-            duration: 2,
-            paused: true,
-        });
+    // Vérifiez la taille de l'écran avant de créer l'animation
+    if (window.innerWidth >= 800) {
+        projects.forEach((project) => {
+            const animation = gsap.from(project, {
+                opacity: 0,
+                stagger: 0.1,
+                y: 90,
+                duration: 1,
+                paused: true,
+            });
 
-        ScrollTrigger.create({
-            trigger: project,
-            start: "bottom bottom",
-            onEnter: () => animation.play(),
+            ScrollTrigger.create({
+                trigger: project,
+                start: "top 80%",
+                onEnter: () => animation.play(),
+            });
         });
-    });
+    }
+
 
     // Animation de mon curseur
     const cursor = document.querySelector(".cursor");
