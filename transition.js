@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         onEnter: animationSkills,
     });
 
+
+    // Animation de mon header 
     const lineHero = document.querySelector(".line-hero");
     const lineIcons = document.querySelectorAll(".line-icons a");
 
@@ -58,19 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animation de mon "blob" qui suit la souris sur ma section hero
     let blobSVG = document.getElementById("animate-background");
 
-    let setCursorPosition = function (e) {
-        let xPosition = e.clientX - blobSVG.clientWidth / 2 + "px";
-        let yPosition = e.clientY - blobSVG.clientHeight / 2 + "px";
-        blobSVG.style.transform =
-            "translate(" + xPosition + "," + yPosition + ")";
-        return {
-            x: xPosition,
-            y: yPosition
-        };
-    };
-
-    document.addEventListener("mousemove", e => setCursorPosition(e));
-
     // Récupération de la dimension de l'écran 
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -88,15 +77,28 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 8,
     });
 
+    let setCursorPosition = function (e) {
+        let xPosition = e.clientX - blobSVG.clientWidth / 2 + "px";
+        let yPosition = e.clientY - blobSVG.clientHeight / 2 + "px";
+        blobSVG.style.transform =
+            "translate(" + xPosition + "," + yPosition + ")";
+        return {
+            x: xPosition,
+            y: yPosition
+        };
 
+    };
+
+    document.addEventListener("mousemove", e => setCursorPosition(e));
+
+    // Animation de ma section projet
     const projects = document.querySelectorAll(".project-container");
 
     projects.forEach((project) => {
         const animation = gsap.from(project, {
             opacity: 0,
-            y: 70,
             stagger: 0.1,
-            duration: 0.7,
+            duration: 2,
             paused: true,
         });
 
@@ -104,10 +106,57 @@ document.addEventListener("DOMContentLoaded", function () {
             trigger: project,
             start: "bottom bottom",
             onEnter: () => animation.play(),
-            onLeaveBack: () => animation.reverse(),
         });
     });
 
+    // Animation de mon curseur
+    const cursor = document.querySelector(".cursor");
+    const follower = document.querySelector(".cursor-follower");
 
+    let posX = 0;
+    let posY = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+
+    gsap.to({}, {
+        duration: 0.016,
+        repeat: -1,
+        onRepeat: function () {
+            posX += (mouseX - posX) / 9;
+            posY += (mouseY - posY) / 9;
+
+            gsap.set(follower, {
+                left: posX - 10,
+                top: posY - 10
+            });
+
+            gsap.set(cursor, {
+                left: mouseX,
+                top: mouseY
+            });
+        }
+    });
+
+    document.addEventListener("mousemove", function (e) {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+    });
+
+    const containerLeftImg = document.querySelectorAll(".container-left img");
+
+    containerLeftImg.forEach(e => {
+        e.addEventListener("mouseenter", function () {
+            cursor.classList.add("active");
+            follower.classList.add("active");
+            cursor.textContent = "Voir le projet";
+        });
+
+        e.addEventListener("mouseleave", function () {
+            cursor.classList.remove("active");
+            follower.classList.remove("active");
+            cursor.textContent = "";
+        });
+    });
 
 })
+

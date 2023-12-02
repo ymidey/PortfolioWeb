@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Récupération du thème actuel dans le stockage local (s'il y en a un)
-    let currentTheme = localStorage.getItem('theme') || 'light';
+    let currentTheme = localStorage.getItem('theme') || 'dark';
 
     // Application du thème actuel
     document.documentElement.setAttribute('data-theme', currentTheme);
