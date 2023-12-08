@@ -157,3 +157,49 @@
 .gallery-controls-suivant:hover::before {
     right: -40px;
 }
+
+.header-container h1 {
+    font-size: 3.5rem;
+}
+
+.header-container p {
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.header-container a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: var(--primary);
+    color: var(--fill);
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1.3vh 1.3vw;
+    width: fit-content;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.header-container a svg {
+    width: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.header-container a:hover {
+    border-radius: 25px;
+}
+
+.header-container a:hover svg {
+    transform: translateX(5px) translateY(-3px);
+}
+
+.content-container h2 {
+    font-size: 1.825rem;
+    font-weight: 800;
+}
+
+.content-container p, li {
+    font-size: 1.225rem;
+}
