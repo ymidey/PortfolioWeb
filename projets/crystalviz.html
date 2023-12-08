@@ -7,6 +7,7 @@
     <title>Yannick Midey - Portfolio</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="style-projet.css">
 </head>
 
 <body>
@@ -46,28 +47,57 @@
     </header>
 
     <body>
-        <div class="container"></div>
-        <div class="header-container">
-            <h1>Crystal'Viz</h1>
-            <p>Octobre 2023</p>
-            <p>Projet scolaire réalisé en groupe de 3 personnes</p>
-            <a href=""></a>
+        <div class="container">
+            <div class="gallery">
+                <div class="gallery-container">
+                    <img src="image-projet/image-dataviz1.png" alt="" class="gallery-item gallery-item-1"
+                        data-index="1">
+                    <img src="image-projet/image-dataviz2.png" alt="" class="gallery-item gallery-item-2"
+                        data-index="2">
+                    <img src="image-projet/image-dataviz3.png" alt="" class="gallery-item gallery-item-3"
+                        data-index="3">
+                    <img src="image-projet/image-dataviz1.png" alt="" class="gallery-item gallery-item-4"
+                        data-index="4">
+                    <img src="image-projet/image-dataviz2.png" alt="" class="gallery-item gallery-item-5"
+                        data-index="5">
+                </div>
+                <div class="gallery-controls"></div>
+            </div>
+
+            <div class="header-container">
+                <h1><span class="underline">Crystal'Viz</span></h1>
+                <p>Octobre 2023</p>
+                <p>Projet scolaire réalisé en groupe de 3 personnes</p>
+                <a href="http://ymidey.github.io/Crystal-Viz/" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="content-container">
+                <div class="description-content">
+                    <h2>Description du projet</h2>
+                    Le projet Crystal-Viz, est une interface web qui, à l'aide d'une représentation visuel
+                    interactive
+                    qui
+                    permet de
+                    visualiser de manière claire et attrayante les
+                    données liées à l'évolution des pays ayant remporté le Cristal du Long Métrage au Festival
+                    d'Annecy.
+                </div>
+                <div class="technology-content">
+                    <h2>Technologies utilisées</h2>
+                    Language de programmation : HTML - CSS - Javascript <br>
+                    Librairie : GSAP, D3.JS
+                </div>
+                <div class="learn-content">
+                    <h2>Ce que j'ai appris</h2>
+                    Language de programmation : HTML - CSS - Javascript <br>
+                    Librairie : GSAP, D3.JS
+                </div>
+            </div>
         </div>
 
-        <div class="content-container">
-            <div class="description-content">
-                <h2>Description du projet </h2>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est laboriosam ratione exercitationem
-                voluptatem, hic provident maiores sunt aperiam animi rem beatae doloremque ut, laborum quos temporibus,
-                molestias dolore et quas!
-            </div>
-            <div class="technology-content">
-                <h2>Technologies utilisées</h2>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est laboriosam ratione exercitationem
-                voluptatem, hic
-                provident maiores sunt aperiam animi rem beatae doloremque ut, laborum quos temporibus, molestias dolore
-                et quas!
-            </div>
-        </div>
+        <script src="../script.js"></script>
+        <script src="script-projet.js"></script>
 
+        <!-- Importation de la librairie split-type -->
+        <script src="https://unpkg.com/split-type"></script>
     </body>

@@ -152,13 +152,11 @@ document.addEventListener("DOMContentLoaded", function () {
     containerLeftImg.forEach(e => {
         e.addEventListener("mouseenter", function () {
             cursor.classList.add("active");
-            follower.classList.add("active");
             cursor.textContent = "Voir le projet";
         });
 
         e.addEventListener("mouseleave", function () {
             cursor.classList.remove("active");
-            follower.classList.remove("active");
             cursor.textContent = "";
         });
     });
