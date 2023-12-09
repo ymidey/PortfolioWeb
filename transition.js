@@ -116,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Animation de mon curseur
     const cursor = document.querySelector(".cursor");
-    const follower = document.querySelector(".cursor-follower");
 
     let posX = 0;
     let posY = 0;
@@ -129,11 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
         onRepeat: function () {
             posX += (mouseX - posX) / 9;
             posY += (mouseY - posY) / 9;
-
-            gsap.set(follower, {
-                left: posX - 10,
-                top: posY - 10
-            });
 
             gsap.set(cursor, {
                 left: mouseX,
@@ -162,4 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 })
+
+
 

@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yannick Midey - Portfolio</title>
+    <title>Yannick Midey - Portfolio - Portrait-chinois</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="style-projet.css">
 </head>
 
 <body>
@@ -45,29 +46,62 @@
         </nav>
     </header>
 
-    <body>
-        <div class="container"></div>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-container">
+                <img src="image-projet/image-portraitchinois1.png" alt="" class="gallery-item gallery-item-1"
+                    data-index="1">
+                <img src="image-projet/image-portraitchinois2.png" alt="" class="gallery-item gallery-item-2"
+                    data-index="2">
+                <img src="image-projet/image-portraitchinois3.png" alt="" class="gallery-item gallery-item-3"
+                    data-index="3">
+                <img src="image-projet/image-portraitchinois4.png" alt="" class="gallery-item gallery-item-4"
+                    data-index="4">
+            </div>
+            <div class="gallery-controls"></div>
+        </div>
+
         <div class="header-container">
-            <h1>Portrait chinois</h1>
+            <h1><span class="underline">Portrait-chinois</span></h1>
             <p>Janvier 2023</p>
-            <p>Projet scolaire réalisé seul</p>
-            <a href=""></a>
+            <a href="https://ymidey.github.io/Portrait_Chinois/" target="_blank"><span>Visiter le site</span><svg
+                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M8.341 6.022 18 6l-.02 9.66M18 6.002 6 18" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a>
         </div>
 
         <div class="content-container">
             <div class="description-content">
-                <h2>Description du projet </h2>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est laboriosam ratione exercitationem
-                voluptatem, hic provident maiores sunt aperiam animi rem beatae doloremque ut, laborum quos temporibus,
-                molestias dolore et quas!
+                <h2>Description du projet</h2>
+                <p>Le projet <span class="strong">portrait-chinois</span>, est un projet scolaire réalisé seul. Il se
+                    présente sous la forme d'un <span class="strong">site web</span> présentant mes goûts et ma
+                    personnalité à l'aide d'identification à une personne, un objet, un lieu ou tout autre éléments</p>
             </div>
             <div class="technology-content">
                 <h2>Technologies utilisées</h2>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est laboriosam ratione exercitationem
-                voluptatem, hic
-                provident maiores sunt aperiam animi rem beatae doloremque ut, laborum quos temporibus, molestias dolore
-                et quas!
+
+                <p><span class="strong">Language de programmation :</span> <br></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+            <div class="learn-content">
+                <h2>Ce que j'ai appris</h2>
+                <p>Language de programmation : HTML - CSS - Javascript <br>
+                    Librairie : GSAP, D3.JS</p>
             </div>
         </div>
+    </div>
+    </main>
+</body>
 
-    </body>
+<script src="../script.js"></script>
+<script src="script-projet.js"></script>
+
+<!-- Importation de la librairie split-type -->
+<script src="https://unpkg.com/split-type"></script>
+</body>
