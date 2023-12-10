@@ -214,14 +214,21 @@ nav .right li {
     display: none;
     height: 100vh;
     position: fixed;
-    background-color: #232027;
     z-index: 99;
     width: 100vw;
+    color: #ece2f9;
+    background: #232027;
+    top: 0;
+}
+
+#nav-mobile #SVGRepo_iconCarrier * {
+    stroke: #ece2f9;
 }
 
 .navigation-mobile {
     display: flex;
     flex-direction: column;
+    background: #232027;
 }
 
 /* Section hero */
