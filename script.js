@@ -24,17 +24,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // Utilisation de SplitType pour animé chaque charactère de mon titre et sous-titre
-    const myTitleHeader = new SplitType('#hero-title')
-    const myParagrapheHeader = new SplitType('#hero-paragraphe')
-
     var burgerMenu = document.querySelectorAll('.burger-menu');
     var navMobile = document.getElementById('nav-mobile');
+    var liens = document.querySelectorAll('#nav-mobile a');
 
     burgerMenu.forEach(e => {
         e.addEventListener('click', function () {
-            // Inversez la visibilité de la navigation
+            // Inverse la visibilité de la navigation
             navMobile.style.display = (navMobile.style.display === 'none' || navMobile.style.display === '') ? 'flex' : 'none';
+        });
+    });
+
+    // Gestionnaire d'événements de clic à chaque lien
+    liens.forEach(function (lien) {
+        lien.addEventListener('click', function () {
+            // Cachez la div #nav-mobile lorsqu'il y a un clic sur un lien
+            navMobile.style.display = 'none';
         });
     });
 

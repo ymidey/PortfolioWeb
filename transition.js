@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Utilisation de SplitType pour animé chaque charactère de mon titre et sous-titre
+    const myTitleHeader = new SplitType('#hero-title')
+    const myParagrapheHeader = new SplitType('#hero-paragraphe')
+
     gsap.registerPlugin(ScrollTrigger);
 
     // Animation de mon titre
