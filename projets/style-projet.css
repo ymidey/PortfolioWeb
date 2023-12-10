@@ -212,3 +212,35 @@
     display: flex;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 1020px) {
+    .gallery-item-2, .gallery-item-4, .gallery-item-1, .gallery-item-5, .gallery-item-3 {
+        width: 95vw;
+        height: auto;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100vw;
+    }
+
+    .gallery-container {
+        height: 160px;
+    }
+
+    .header-container h1 {
+        font-size: 2rem;
+    }
+
+    .header-container, .content-container, .next-project {
+        margin: 0 15px;
+    }
+
+    .next-project {
+        justify-content: flex-start;
+    }
+}
