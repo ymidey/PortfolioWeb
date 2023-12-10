@@ -34,6 +34,7 @@
     display: flex;
     margin: auto;
     flex-direction: column;
+    padding-bottom: 80px;
 }
 
 .gallery-container {
@@ -169,7 +170,7 @@
     color: var(--text);
 }
 
-.header-container a {
+.link {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -184,16 +185,17 @@
     transition: all .2s ease-in-out;
 }
 
-.header-container a svg {
+
+.link svg {
     width: 30px;
     transition: all .3s ease-in-out;
 }
 
-.header-container a:hover {
+.link:hover {
     border-radius: 25px;
 }
 
-.header-container a:hover svg {
+.link:hover svg {
     transform: translateX(5px) translateY(-3px);
 }
 
@@ -204,4 +206,9 @@
 
 .content-container p, li {
     font-size: 1.225rem;
+}
+
+.next-project {
+    display: flex;
+    justify-content: flex-end;
 }
