@@ -27,4 +27,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Utilisation de SplitType pour animé chaque charactère de mon titre et sous-titre
     const myTitleHeader = new SplitType('#hero-title')
     const myParagrapheHeader = new SplitType('#hero-paragraphe')
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var burgerMenu = document.querySelector('.burger-menu');
+        var navUl = document.getElementById('header-nav').querySelector('.hidden');
+
+        burgerMenu.addEventListener('click', function () {
+            // Inversez la visibilité de la navigation
+            navUl.style.display = (navUl.style.display === 'none' || navUl.style.display === '') ? 'flex' : 'none';
+        });
+    });
+
 });

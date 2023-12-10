@@ -17,7 +17,7 @@
 
 /* Couleur en mode clair */
 :root[data-theme="light"] {
-    --text: #130625;
+    --text: #1d1e30;
     --background: #f3edf8;
     --primary: #4c06a2;
     --secondary: #9179ac;
@@ -32,6 +32,23 @@
 /* Classe permettant de mettre en gras tout texte ayant la class strong */
 .strong {
     font-weight: 900;
+}
+
+/* CSS permettant d'ajouter un surlignage personnalisé */
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 2px;
+    left: 0.6ch;
+    width: 100%;
+    transform-origin: left;
+    height: 33%;
+    background: var(--primary);
 }
 
 /* Changement du style de la scrollbar */
@@ -57,7 +74,6 @@
 
 .icons {
     filter: var(--icons);
-    fill: #09FB76;
 }
 
 a {
@@ -74,14 +90,17 @@ body {
     overflow-x: hidden;
 }
 
+/* Ajout d'une margin pour chacune de mes sections */
 section {
     margin: 0 40px 150px 40px;
 }
 
+/* Ajout d'un padding sur des sections spécifiques */
 #a-propos, #projects, #contact {
     padding-top: 50px;
 }
 
+/* Ajout d'une margin spécifique sur ma section contact */
 #contact {
     margin-bottom: 170px;
 }
@@ -168,10 +187,6 @@ nav .left img {
     height: 35px;
 }
 
-nav .right {
-    width: 20%;
-}
-
 nav .right li {
     border-radius: 5px;
     padding: 5px 15px;
@@ -192,12 +207,7 @@ nav .right li {
     cursor: pointer;
 }
 
-a img {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-}
-
+/* Section hero */
 #hero {
     display: flex;
     align-items: center;
@@ -348,7 +358,6 @@ a img {
 
 #a-propos .resume p {
     font-size: 1.5rem;
-    max-width: 50%;
 }
 
 #a-propos .skills {
@@ -368,7 +377,12 @@ a img {
     font-size: 1.4rem;
 }
 
-.skills ul>li:nth-child(odd)>i {
+.skills p {
+    padding: 7px;
+    margin: 0;
+}
+
+.skills ul>li:nth-child(odd)>p i {
     background: linear-gradient(53deg, var(--primary) 35%, var(--accent)100%);
     -webkit-background-clip: text;
     color: transparent;
@@ -463,28 +477,13 @@ a img {
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 #projects li {
     border: 2px solid var(--secondary);
     padding: 5px;
     border-radius: 0.5rem;
-}
-
-.underline {
-    position: relative;
-}
-
-.underline::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 2px;
-    left: 0.6ch;
-    width: 100%;
-    transform-origin: left;
-    height: 33%;
-    background: var(--primary);
 }
 
 .hover-this:hover~.cursor {
@@ -542,6 +541,73 @@ a img {
     cursor: none;
 }
 
+/* CSS de ma section contact */
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-content a {
+    text-decoration: none;
+}
+
+.contact-header {
+    max-width: 600px;
+    font-size: 1.225rem;
+}
+
+.contact-card-content {
+    display: flex;
+    align-items: center;
+    width: clamp(240px, 100%, 640px);
+    height: fit-content;
+    padding: 12px 20px;
+    gap: 16px;
+    background: #1d1e30;
+    border-radius: 16px;
+    filter: drop-shadow(0 32px 32px rgba(0, 0, 0, .08));
+    transition: all .2s ease;
+    color: #ece2f9;
+}
+
+.contact-card-content:nth-child(odd):hover {
+    rotate: 2deg;
+}
+
+.contact-card-content:hover {
+    rotate: -2deg;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 700px;
+    height: 100%;
+}
+
+@media screen and (min-width: 400px) {
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.contact-card-text {
+    display: flex;
+    flex-direction: column;
+    color: #ece2f9;
+}
+
+.contact-card-text * {
+    padding: 10px;
+    margin: 0;
+}
+
 /* footer */
 .Footer-container {
     display: flex;
@@ -594,66 +660,69 @@ a img {
     }
 }
 
-.contact-content {
-    display: flex;
-    flex-direction: row;
+
+.burger-menu {
+    border: none;
+    background: transparent;
 }
 
-.contact-content a {
-    text-decoration: none;
+#SVGRepo_iconCarrier * {
+    stroke: var(--text);
 }
 
-.contact-header {
-    max-width: 600px;
-    font-size: 1.225rem;
+/* Par défaut, masquez la navigation */
+#header-nav .hidden {
+    display: none;
 }
 
-.contact-card-content {
-    display: flex;
-    align-items: center;
-    width: clamp(240px, 100%, 640px);
-    height: fit-content;
-    padding: 12px 20px;
-    gap: 16px;
-    background: #1d1e30;
-    border-radius: 16px;
-    filter: drop-shadow(0 32px 32px rgba(0, 0, 0, .08));
-    transition: all .2s ease;
-    color: #ece2f9;
-}
+/* Affichez la navigation si la largeur de l'écran est supérieure à 1020px */
+@media screen and (min-width: 1020px) {
+    #header-nav .hidden {
+        display: flex;
+    }
 
-.contact-card-content:nth-child(odd):hover {
-    rotate: 2deg;
-}
+    #header-nav .burger-nav {
+        display: none;
+    }
 
-.contact-card-content:hover {
-    rotate: -2deg;
-}
+    #a-propos .resume p {
+        max-width: 50%;
+    }
 
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    height: 100%;
-}
-
-@media screen and (min-width: 400px) {
-    .contact-icon {
-        width: 48px;
-        height: 48px;
+    nav .right {
+        width: 20%;
     }
 }
 
-.contact-card-text {
-    display: flex;
-    flex-direction: column;
-    color: #ece2f9;
-}
+/* Affichez l'icône de menu si la largeur de l'écran est inférieure à 1020px */
+@media screen and (max-width: 1020px) {
+    #header-nav .burger-menu {
+        display: block;
+    }
 
-.contact-card-text * {
-    padding: 10px;
-    margin: 0;
+    #header-nav .hidden {
+        display: none;
+    }
+
+    .Footer_blob-container, #animate-background {
+        display: none;
+    }
+
+
+    #hero-title {
+        font-size: 3rem;
+    }
+
+    table * {
+        font-size: 1rem;
+    }
+
+    #projects .project-container {
+        max-width: 100%;
+    }
+
+    #a-propos th, td {
+        padding: 0;
+    }
+
 }

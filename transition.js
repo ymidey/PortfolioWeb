@@ -9,30 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: .1
     })
 
-    // Animation de mon tableau de mes compétences
-    const skills = document.querySelectorAll(".skills li")
-    function animationSkills() {
-        gsap.from(skills, {
-            opacity: 0,
-            y: 100,
-            stagger: 0.1,
-            duration: .7,
-        });
-    }
-
-    ScrollTrigger.create({
-        trigger: skills,
-        start: "top bottom",
-        onEnter: animationSkills,
-    });
-
-
-    ScrollTrigger.create({
-        trigger: skills,
-        start: "bottom top",
-        onEnter: animationSkills,
-    });
-
 
     // Animation de mon header 
     const lineHero = document.querySelector(".line-hero");
