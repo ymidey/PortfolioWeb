@@ -32,7 +32,6 @@
 .container {
     width: 1250px;
     display: flex;
-    margin: auto;
     flex-direction: column;
     padding-bottom: 80px;
 }
@@ -213,6 +212,12 @@
     justify-content: flex-end;
 }
 
+@media screen and (min-width: 1020px) {
+    .container {
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 1020px) {
     .gallery-item-2, .gallery-item-4, .gallery-item-1, .gallery-item-5, .gallery-item-3 {
         width: 95vw;
@@ -222,6 +227,7 @@
     .gallery {
         display: flex;
         flex-direction: column;
+        gap: 6rem;
     }
 
     .container {
@@ -242,5 +248,21 @@
 
     .next-project {
         justify-content: flex-start;
+    }
+
+    .container {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gallery {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gallery {
+        gap: 1rem;
     }
 }

@@ -351,6 +351,22 @@ nav .right li {
     flex-direction: column;
 }
 
+#a-propos .resume .resume-content {
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+}
+
+#a-propos .resume .resume-content img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#a-propos .resume .resume-content .resume-text {
+    max-width: 50%;
+}
+
 .title {
     font-size: 2.8rem;
     text-transform: uppercase;
@@ -371,10 +387,6 @@ nav .right li {
 
 .skills th {
     font-weight: 700;
-}
-
-.skills li {
-    font-size: 1.4rem;
 }
 
 .skills p {
@@ -545,7 +557,7 @@ nav .right li {
 .contact-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -556,6 +568,11 @@ nav .right li {
 .contact-header {
     max-width: 600px;
     font-size: 1.225rem;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
 }
 
 .contact-card-content {
@@ -587,13 +604,6 @@ nav .right li {
     align-items: center;
     gap: 40px;
     height: 100%;
-}
-
-@media screen and (min-width: 400px) {
-    .contact-icon {
-        width: 48px;
-        height: 48px;
-    }
 }
 
 .contact-card-text {
@@ -659,7 +669,6 @@ nav .right li {
     }
 }
 
-
 .burger-menu {
     border: none;
     background: transparent;
@@ -682,10 +691,6 @@ nav .right li {
 
     #header-nav .burger-nav {
         display: none;
-    }
-
-    #a-propos .resume p {
-        max-width: 50%;
     }
 
     nav .right {
@@ -712,15 +717,11 @@ nav .right li {
     }
 
     section {
-        margin: 0 15px;
+        margin: 0 13px;
     }
 
     #hero-title {
         font-size: 3rem;
-    }
-
-    table * {
-        font-size: .9rem;
     }
 
     #projects .project-container {
@@ -742,4 +743,35 @@ nav .right li {
     #projects ul {
         gap: 10px;
     }
+
+    #a-propos .resume .resume-content {
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    #a-propos .resume .resume-content .resume-text {
+        max-width: 100%;
+    }
+
+    .contact-list {
+        width: 85%;
+        align-items: flex-start;
+    }
+
+    #a-propos .skills {
+        margin: 0;
+    }
+
+    #a-propos table {
+        width: 80%
+    }
+
+    #a-propos th, td {
+        font-size: .9rem;
+        padding: 6px;
+    }
+
+
 }
