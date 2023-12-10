@@ -586,7 +586,6 @@ nav .right li {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    width: 700px;
     height: 100%;
 }
 
@@ -692,6 +691,10 @@ nav .right li {
     nav .right {
         width: 20%;
     }
+
+    .contact-list {
+        width: 700px;
+    }
 }
 
 /* Affichez l'icône de menu si la largeur de l'écran est inférieure à 1020px */
@@ -708,13 +711,16 @@ nav .right li {
         display: none;
     }
 
+    section {
+        margin: 0 15px;
+    }
 
     #hero-title {
         font-size: 3rem;
     }
 
     table * {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     #projects .project-container {
@@ -725,4 +731,15 @@ nav .right li {
         padding: 0;
     }
 
+    #projects .container-right h3 {
+        font-size: 1.7rem;
+    }
+
+    #projects .project-container {
+        gap: 10px;
+    }
+
+    #projects ul {
+        gap: 10px;
+    }
 }

@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: .1
     })
 
-
     // Animation de mon header 
     const lineHero = document.querySelector(".line-hero");
     const lineIcons = document.querySelectorAll(".line-icons a");
@@ -66,6 +65,28 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     document.addEventListener("mousemove", e => setCursorPosition(e));
+
+
+    const skills = document.querySelectorAll(".skills li");
+    let animationPlayed = false;
+
+    function animationSkills() {
+        if (!animationPlayed) {
+            gsap.from(skills, {
+                opacity: 0,
+                y: 100,
+                stagger: 0.1,
+                duration: 0.7,
+            });
+            animationPlayed = true; // Marquer l'animation comme jouée
+        }
+    }
+
+    ScrollTrigger.create({
+        trigger: skills,
+        start: "top bottom",
+        onEnter: animationSkills,
+    });
 
     // Animation de ma section projet
     const projects = document.querySelectorAll(".project-container");
