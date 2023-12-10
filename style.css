@@ -594,13 +594,13 @@ a img {
     }
 }
 
-.contact-content a {
-    text-decoration: none;
-}
-
 .contact-content {
     display: flex;
     flex-direction: row;
+}
+
+.contact-content a {
+    text-decoration: none;
 }
 
 .contact-header {
@@ -619,7 +619,7 @@ a img {
     border-radius: 16px;
     filter: drop-shadow(0 32px 32px rgba(0, 0, 0, .08));
     transition: all .2s ease;
-    color: var(--text);
+    color: #ece2f9;
 }
 
 .contact-card-content:nth-child(odd):hover {
@@ -650,6 +650,7 @@ a img {
 .contact-card-text {
     display: flex;
     flex-direction: column;
+    color: #ece2f9;
 }
 
 .contact-card-text * {
