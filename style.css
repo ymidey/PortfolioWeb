@@ -39,6 +39,10 @@
     position: relative;
 }
 
+button {
+    cursor: pointer;
+}
+
 .underline::after {
     content: "";
     position: absolute;
@@ -143,7 +147,7 @@ nav li a {
     justify-content: center;
 }
 
-nav .mid li a::after {
+nav .mid li a::after, .navigation-mobile a::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -154,7 +158,7 @@ nav .mid li a::after {
     transition: width 0.3s ease-in-out;
 }
 
-nav .mid li a:hover::after {
+nav .mid li a:hover::after, .navigation-mobile a:hover::after {
     width: 100%;
     transition: width 0.3s ease-in-out;
 }
@@ -204,7 +208,20 @@ nav .right li {
     width: 65px;
     height: 65px;
     filter: var(--icons);
-    cursor: pointer;
+}
+
+#nav-mobile {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    background-color: #232027;
+    z-index: 99;
+    width: 100vw;
+}
+
+.navigation-mobile {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Section hero */
@@ -749,7 +766,6 @@ nav .right li {
         justify-content: center;
         flex-wrap: wrap;
     }
-
 
     #a-propos .resume .resume-content .resume-text {
         max-width: 100%;

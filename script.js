@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const myTitleHeader = new SplitType('#hero-title')
     const myParagrapheHeader = new SplitType('#hero-paragraphe')
 
-    document.addEventListener("DOMContentLoaded", function () {
-        var burgerMenu = document.querySelector('.burger-menu');
-        var navUl = document.getElementById('header-nav').querySelector('.hidden');
+    var burgerMenu = document.querySelectorAll('.burger-menu');
+    var navMobile = document.getElementById('nav-mobile');
 
-        burgerMenu.addEventListener('click', function () {
+    burgerMenu.forEach(e => {
+        e.addEventListener('click', function () {
             // Inversez la visibilité de la navigation
-            navUl.style.display = (navUl.style.display === 'none' || navUl.style.display === '') ? 'flex' : 'none';
+            navMobile.style.display = (navMobile.style.display === 'none' || navMobile.style.display === '') ? 'flex' : 'none';
         });
     });
 
