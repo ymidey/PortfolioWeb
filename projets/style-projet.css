@@ -169,35 +169,6 @@
     color: var(--text);
 }
 
-.link {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    background-color: var(--primary);
-    color: #ece2f9;
-    font-size: 1.2rem;
-    font-weight: 800;
-    padding: 1.3vh 1.3vw;
-    width: fit-content;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all .2s ease-in-out;
-}
-
-
-.link svg {
-    width: 30px;
-    transition: all .3s ease-in-out;
-}
-
-.link:hover {
-    border-radius: 25px;
-}
-
-.link:hover svg {
-    transform: translateX(5px) translateY(-3px);
-}
-
 .content-container h2 {
     font-size: 1.825rem;
     font-weight: 900;
@@ -210,6 +181,7 @@
 .next-project {
     display: flex;
     justify-content: flex-end;
+    margin-top: 40px;
 }
 
 @media screen and (min-width: 1020px) {
@@ -227,7 +199,7 @@
     .gallery {
         display: flex;
         flex-direction: column;
-        gap: 6rem;
+        gap: 8rem;
     }
 
     .container {
@@ -257,7 +229,7 @@
 
 @media screen and (max-width: 800px) {
     .gallery {
-        gap: 3rem;
+        gap: 4rem;
     }
 }
 

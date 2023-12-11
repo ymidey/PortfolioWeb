@@ -55,6 +55,36 @@ button {
     background: var(--primary);
 }
 
+
+.link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: var(--primary);
+    color: #ece2f9;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 1.3vh 1.3vw;
+    width: fit-content;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+
+.link svg {
+    width: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.link:hover {
+    border-radius: 25px;
+}
+
+.link:hover svg {
+    transform: translateX(5px) translateY(-3px);
+}
+
 /* Changement du style de la scrollbar */
 /* taille de la scrollbar */
 ::-webkit-scrollbar {
@@ -147,7 +177,7 @@ nav li a {
     justify-content: center;
 }
 
-nav .mid li a::after, .navigation-mobile a::after {
+nav .mid li a::after, .link-hover::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -158,7 +188,7 @@ nav .mid li a::after, .navigation-mobile a::after {
     transition: width 0.3s ease-in-out;
 }
 
-nav .mid li a:hover::after, .navigation-mobile a:hover::after {
+nav .mid li a:hover::after, .link-hover:hover::after {
     width: 100%;
     transition: width 0.3s ease-in-out;
 }
@@ -173,7 +203,6 @@ nav .mid {
 
 nav .left {
     width: 20%;
-    height: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -187,8 +216,8 @@ nav .left li {
     align-items: center;
 }
 
-nav .left img {
-    height: 35px;
+nav img {
+    height: 50px;
 }
 
 nav .right li {
@@ -378,7 +407,7 @@ nav .right li {
 #a-propos .resume .resume-content {
     display: flex;
     flex-direction: row;
-    gap: 250px;
+    gap: 270px;
 }
 
 #a-propos .resume .resume-content img {
@@ -397,7 +426,7 @@ nav .right li {
 }
 
 #a-propos .resume p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #a-propos .skills {
@@ -628,6 +657,7 @@ nav .right li {
     align-items: center;
     gap: 40px;
     height: 100%;
+    margin-right: 200px;
 }
 
 .contact-card-text {
@@ -796,5 +826,8 @@ nav .right li {
         padding: 6px;
     }
 
+    #a-propos .resume .resume-content img {
+        width: 100%;
+    }
 
 }
