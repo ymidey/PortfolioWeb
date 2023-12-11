@@ -13,6 +13,7 @@
     --icon-toggle: url('./images/icons/dark_mode_icon.svg');
     --svgbackground: #331e4e;
     --navbackground: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.7));
+    --filtre: invert(0)
 }
 
 /* Couleur en mode clair */
@@ -27,6 +28,7 @@
     --icon-toggle: url('images/icons/light_mode_icon.svg');
     --svgbackground: #b59fd3;
     --navbackground: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.7));
+    --filter: invert(1)
 }
 
 /* Classe permettant de mettre en gras tout texte ayant la class strong */
@@ -175,6 +177,10 @@ nav li a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo {
+    filter: var(--filter);
 }
 
 nav .mid li a::after, .link-hover::after {
