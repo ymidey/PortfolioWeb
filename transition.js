@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    const scroll = document.getElementById("scroll");
+    const apropos = document.getElementById("a-propos")
+    scroll.addEventListener('click', function () {
+        apropos.scrollIntoView({ behavior: 'smooth' });
+    })
+
     // Utilisation de SplitType pour animé chaque charactère de mon titre et sous-titre
     const myTitleHeader = new SplitType('#hero-title')
     const myParagrapheHeader = new SplitType('#hero-paragraphe')

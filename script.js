@@ -23,13 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
         currentTheme = newTheme;
     });
 
-    const scroll = document.getElementById("scroll");
-    const apropos = document.getElementById("a-propos")
-    scroll.addEventListener('click', function () {
-        apropos.scrollIntoView({ behavior: 'smooth' });
-    })
-
-
     var burgerMenu = document.querySelectorAll('.burger-menu');
     var navMobile = document.getElementById('nav-mobile');
     var liens = document.querySelectorAll('#nav-mobile a');

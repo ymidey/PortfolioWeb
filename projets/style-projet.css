@@ -39,7 +39,7 @@
 .gallery-container {
     align-items: center;
     display: flex;
-    height: 400px;
+    height: 420px;
     margin: 0 auto;
     max-width: 860px;
     position: relative;
@@ -198,15 +198,11 @@
     .gallery {
         display: flex;
         flex-direction: column;
-        gap: 8rem;
+        gap: 1rem;
     }
 
     .container {
-        width: 100vw;
-    }
-
-    .gallery-container {
-        height: 160px;
+        width: 100%;
     }
 
     .header-container h1 {
@@ -227,18 +223,18 @@
 
     .gallery-controls button {
         margin: 0 10px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .gallery {
-        gap: 4rem;
+    .gallery-container {
+        height: 320px;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .gallery {
-        gap: 1rem;
+@media screen and (max-width: 600px) {
+    .gallery-container {
+        height: 220px;
     }
 }

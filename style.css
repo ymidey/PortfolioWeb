@@ -251,10 +251,10 @@ nav .right li {
 
 #nav-mobile {
     display: none;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     z-index: 99;
-    width: 100vw;
+    width: 100%;
     color: #ece2f9;
     background: #232027;
     top: 0;
@@ -766,6 +766,15 @@ nav .right li {
 
 /* Affichez l'icône de menu si la largeur de l'écran est inférieure à 1020px */
 @media screen and (max-width: 1020px) {
+
+    .title {
+        font-size: 2.3rem;
+    }
+
+    section {
+        margin: 0 13px;
+    }
+
     #header-nav .burger-menu {
         display: block;
     }
@@ -778,44 +787,20 @@ nav .right li {
         margin: 0 13px;
     }
 
+    nav img {
+        width: 35px;
+    }
+
     #hero .scroll-downs {
         display: none;
-    }
-
-    .title {
-        font-size: 2.3rem;
-    }
-
-    .Footer_blob-container, #animate-background {
-        display: none;
-    }
-
-    section {
-        margin: 0 13px;
     }
 
     #hero-title {
         font-size: 3rem;
     }
 
-    #projects .project-container {
-        max-width: 100%;
-    }
-
     #a-propos th, td {
         padding: 0;
-    }
-
-    #projects .container-right h3 {
-        font-size: 1.7rem;
-    }
-
-    #projects .project-container {
-        gap: 10px;
-    }
-
-    #projects ul {
-        gap: 10px;
     }
 
     #a-propos .resume .resume-content {
@@ -828,21 +813,42 @@ nav .right li {
         max-width: 100%;
     }
 
-    .contact-list {
-        width: 85%;
-        align-items: flex-start;
-    }
-
     #a-propos .skills .skills-list {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
+        justify-items: normal;
     }
 
     #a-propos .resume .resume-content img {
         width: 100%;
     }
 
+    #projects ul {
+        gap: 10px;
+    }
+
+    #projects .project-container {
+        max-width: 100%;
+    }
+
+    #projects .container-right h3 {
+        font-size: 1.7rem;
+    }
+
+    #projects .project-container {
+        gap: 40px;
+    }
+
+    .contact-list {
+        width: 85%;
+        align-items: flex-start;
+    }
+
     .contact-content {
         flex-wrap: wrap;
+    }
+
+    .Footer_blob-container, #animate-background {
+        display: none;
     }
 }
