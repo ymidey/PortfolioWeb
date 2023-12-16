@@ -53,23 +53,23 @@ document.addEventListener("DOMContentLoaded", function () {
         y: centerY,
         scale: 0,
         opacity: 0,
-        duration: 8,
+        duration: 3,
     });
 
     let setCursorPosition = function (e) {
-        let xPosition = e.clientX - blobSVG.clientWidth / 2 + "px";
-        let yPosition = e.clientY - blobSVG.clientHeight / 2 + "px";
-        blobSVG.style.transform =
-            "translate(" + xPosition + "," + yPosition + ")";
+        requestAnimationFrame(function () {
+            let xPosition = e.clientX - blobSVG.clientWidth / 2 + "px";
+            let yPosition = e.clientY - blobSVG.clientHeight / 2 + "px";
+            blobSVG.style.transform =
+                "translate(" + xPosition + "," + yPosition + ")";
+        });
         return {
             x: xPosition,
             y: yPosition
         };
-
     };
 
     document.addEventListener("mousemove", e => setCursorPosition(e));
-
 
     const skills = document.querySelectorAll(".skills li");
     let animationPlayed = false;

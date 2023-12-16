@@ -347,13 +347,11 @@ nav .right li {
     fill: var(--svgbackground);
     pointer-events: none;
     transform: none;
-    transition: transform 12000ms ease-out;
+    transition: transform 10000ms ease-out;
     padding: 2px;
 }
 
-#hero svg path {
-    max-width: 50%;
-}
+
 
 /* CSS de mon indicateur de scroll */
 #hero .scroll-downs {
@@ -611,9 +609,8 @@ nav .right li {
 .contact-content {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     width: fit-content;
-    gap: 150px;
+    gap: 170px;
 }
 
 .contact-content a {
@@ -841,4 +838,7 @@ nav .right li {
         width: 100%;
     }
 
+    .contact-content {
+        flex-wrap: wrap;
+    }
 }
