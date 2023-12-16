@@ -63,10 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             blobSVG.style.transform =
                 "translate(" + xPosition + "," + yPosition + ")";
         });
-        return {
-            x: xPosition,
-            y: yPosition
-        };
     };
 
     document.addEventListener("mousemove", e => setCursorPosition(e));
