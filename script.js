@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const apropos = document.getElementById("a-propos")
     scroll.addEventListener('click', function () {
         apropos.scrollIntoView({ behavior: 'smooth' });
-
-
     })
 
 
