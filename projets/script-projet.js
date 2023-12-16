@@ -1,6 +1,6 @@
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
-const galleryControls = ['précédent', 'suivant'];
+const galleryControls = ['précédente', 'suivante'];
 const galleryItems = document.querySelectorAll('.gallery-item');
 
 class Carousel {
@@ -26,7 +26,7 @@ class Carousel {
     }
 
     setCurrentState(direction) {
-        if (direction.className == 'gallery-controls-précédent') {
+        if (direction.className == 'gallery-controls-précédente') {
             this.carouselArray.unshift(this.carouselArray.pop());
         } else {
             this.carouselArray.push(this.carouselArray.shift());
@@ -38,7 +38,7 @@ class Carousel {
     setContols() {
         this.carouselControls.forEach(controls => {
             galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${controls}`;
-            document.querySelector(`.gallery-controls-${controls}`).innerText = controls;
+            document.querySelector(`.gallery-controls-${controls}`).innerText = "image " + controls;
         })
     }
 

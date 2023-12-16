@@ -57,7 +57,6 @@ button {
     background: var(--primary);
 }
 
-
 .link {
     display: flex;
     flex-direction: row;
@@ -128,7 +127,7 @@ body {
 
 /* Ajout d'une margin pour chacune de mes sections */
 section {
-    margin: 0 40px 150px 40px;
+    margin: 0 55px 150px 55px;
 }
 
 /* Ajout d'un padding sur des sections spécifiques */
@@ -150,7 +149,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .7% 2% 0 2%;
+    margin: 0 55px;
+    padding-top: 15px;
     font-size: 1.4rem;
     font-weight: 800;
     animation: fadeInDown 1.5s ease-in-out;
@@ -375,6 +375,7 @@ nav .right li {
     border-radius: 25px;
     opacity: 0.75;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 #hero .scroller {
@@ -435,65 +436,57 @@ nav .right li {
     font-size: 1.3rem;
 }
 
-#a-propos .skills {
-    display: flex;
-    flex-direction: column;
+#a-propos .skills .skills-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colonnes pour les 4 catégories */
+    gap: 20px;
+    /* Espacement entre les colonnes et les lignes */
     justify-content: center;
-    align-items: center;
-    margin: 100px;
+    margin: 0 100px;
+    justify-items: center;
 }
 
-
-.skills th {
-    font-weight: 700;
+.skills {
+    margin: 120px 0;
 }
 
-.skills p {
+.skills h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px;
+}
+
+.skills .skills-list h4 {
+    font-size: 1.5rem;
+}
+
+.skills .skills-list li p {
     padding: 7px;
+    font-size: 1.225rem;
     margin: 0;
 }
 
 .skills ul>li:nth-child(odd)>p i {
-    background: linear-gradient(53deg, var(--primary) 35%, var(--accent)100%);
+    background: linear-gradient(53deg, var(--primary) 35%, var(--accent) 100%);
     -webkit-background-clip: text;
     color: transparent;
 }
 
-#a-propos table {
-    width: 80%;
-    border-collapse: collapse;
-}
-
-#a-propos th, td {
-    text-align: left;
-    padding: 10px;
-    vertical-align: top;
-    font-size: 1.3rem;
-}
-
-#a-propos .skills h3 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 80px;
-}
-
-#a-propos ul {
+.skills .skills-list ul {
     list-style: none;
     padding: 0;
 }
 
-#a-propos li {
+.skills .skills-list li {
     padding-bottom: 3%;
 }
 
-#a-propos li img {
+.skills .skills-list li img {
     width: 20px;
     margin-right: 3%;
 }
 
-.skills li {
-    opacity: 1;
-}
 
 /* CSS de ma section projects */
 #projects .container {
@@ -505,11 +498,10 @@ nav .right li {
 
 #projects .project-container {
     display: flex;
-    flex-direction: row;
     gap: 5rem;
     padding: 5em 0;
     flex-wrap: wrap;
-    opacity: 1;
+    justify-content: center;
 }
 
 #projects .project-container:nth-child(odd) {
@@ -527,7 +519,11 @@ nav .right li {
     letter-spacing: .05em;
     text-transform: uppercase;
     font-size: 2.25rem;
-    margin: .5em 0;
+    margin: 0 0 .5em 0;
+}
+
+#projects .container-right p {
+    line-height: 1.5;
 }
 
 #projects .project-link {
@@ -586,7 +582,6 @@ nav .right li {
 .container-left {
     transition: all .7s cubic-bezier(0.25, 1, 0.3, 1);
     width: 540px;
-    height: 300px;
 }
 
 .container-left img {
@@ -616,8 +611,9 @@ nav .right li {
 .contact-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    width: fit-content;
+    gap: 150px;
 }
 
 .contact-content a {
@@ -649,12 +645,13 @@ nav .right li {
 }
 
 .contact-card-content:nth-child(odd):hover {
-    rotate: 2deg;
+    rotate: 1deg;
 }
 
 .contact-card-content:hover {
-    rotate: -2deg;
+    rotate: -1deg;
 }
+
 
 .contact-list {
     display: flex;
@@ -663,7 +660,6 @@ nav .right li {
     align-items: center;
     gap: 40px;
     height: 100%;
-    margin-right: 200px;
 }
 
 .contact-card-text {
@@ -760,6 +756,11 @@ nav .right li {
     .contact-list {
         width: 700px;
     }
+
+    .container-left {
+        height: 300px;
+    }
+
 }
 
 /* Affichez l'icône de menu si la largeur de l'écran est inférieure à 1020px */
@@ -770,6 +771,18 @@ nav .right li {
 
     #header-nav .hidden {
         display: none;
+    }
+
+    nav {
+        margin: 0 13px;
+    }
+
+    #hero .scroll-downs {
+        display: none;
+    }
+
+    .title {
+        font-size: 2.3rem;
     }
 
     .Footer_blob-container, #animate-background {
@@ -819,17 +832,9 @@ nav .right li {
         align-items: flex-start;
     }
 
-    #a-propos .skills {
-        margin: 0;
-    }
-
-    #a-propos table {
-        width: 80%
-    }
-
-    #a-propos th, td {
-        font-size: .9rem;
-        padding: 6px;
+    #a-propos .skills .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
     }
 
     #a-propos .resume .resume-content img {

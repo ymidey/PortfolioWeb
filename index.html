@@ -154,7 +154,7 @@
         </div>
 
         <div class="scroll-downs">
-            <div class="mousey">
+            <div class="mousey" id="scroll">
                 <div class="scroller"></div>
             </div>
         </div>
@@ -201,78 +201,61 @@
 
         <div class="skills">
             <h3>Mes compétences</h3>
-            <table>
-                <tr>
-                    <th>
-                        <h4>Langages</h4>
-                    </th>
-                    <th>
-                        <h4>Bibliothèques et Frameworks</h4>
-                    </th>
-                    <th>
-                        <h4>Base de données</h4>
-                    </th>
-                    <th>
-                        <h4>Autres</h4>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>
-                                <p><i class="devicon-html5-plain"></i>
-                                    HTML
-                                </p>
-                            </li>
-                            <li>
-                                <p><i class="devicon-css3-plain"></i> CSS
-                                </p>
-                            </li>
-                            <li>
-                                <p><i class="devicon-javascript-plain"></i> JavaScript
-                                </p>
-                            </li>
-                            <li>
-                                <p><i class="devicon-php-plain"></i> PHP</p>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>
-                                <p><i class="devicon-bootstrap-plain"></i> BootStrap</p>
-                            </li>
-                            <li>
-                                <p><img src="./images/icons/Greensock-icon.svg" alt="" class="icons"> GreenSock</p>
-                            </li>
-                            <li>
-                                <p><i class="devicon-d3js-plain"></i> D3.js</p>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>
-                                <p><i class="devicon-mysql-plain"></i> MySQL</p>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>
-                                <p><i class="devicon-figma-plain"></i> Figma</p>
-                            </li>
-                            <li>
-                                <p><i class="devicon-github-original"></i> Git & Github</p>
-                            </li>
-                            <li>
-                                <p><i class="devicon-wordpress-plain"></i> WordPress
-                                </p>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+            <div class="skills-list">
+                <div class="category">
+                    <h4>Langages</h4>
+                    <ul>
+                        <li>
+                            <p><i class="devicon-html5-plain"></i> HTML</p>
+                        </li>
+                        <li>
+                            <p><i class="devicon-css3-plain"></i> CSS</p>
+                        </li>
+                        <li>
+                            <p><i class="devicon-javascript-plain"></i> JavaScript</p>
+                        </li>
+                        <li>
+                            <p><i class="devicon-php-plain"></i> PHP</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h4>Bibliothèques et Frameworks</h4>
+                    <ul>
+                        <li>
+                            <p><i class="devicon-bootstrap-plain"></i> BootStrap</p>
+                        </li>
+                        <li>
+                            <p><img src="./images/icons/Greensock-icon.svg" alt="" class="icons"> GreenSock</p>
+                        </li>
+                        <li>
+                            <p><i class="devicon-d3js-plain"></i> D3.js</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h4>Base de données</h4>
+                    <ul>
+                        <li>
+                            <p><i class="devicon-mysql-plain"></i> MySQL</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h4>Logiciels</h4>
+                    <ul>
+                        <li>
+                            <p><i class="devicon-figma-plain"></i> Figma</p>
+                        </li>
+                        <li>
+                            <p><i class="devicon-github-original"></i> Git & Github</p>
+                        </li>
+                        <li>
+                            <p><i class="devicon-wordpress-plain"></i> WordPress</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -370,7 +353,8 @@
                         <li>CSS</li>
                         <li>MySql</li>
                     </ul>
-                    <p>Le Donjon du Kraken est un projet universitaire réalisé en première année de BUT MMI consistant à
+                    <p>Le Donjon du Kraken est un projet universitaire réalisé en première année de BUT MMI
+                        consistant à
                         la
                         réalisation
                         d'un site proposant une option de réservation de produits. Étant passionné par les jeux
@@ -380,10 +364,12 @@
                         tout genre, j'ai conçu un site web permettant aux utilisateurs de réserver des places pour
                         participer à des
                         événements
-                        organisés par une boutique fictive nommée Le Donjon du Kraken. Grâce à la mise en place d'une
+                        organisés par une boutique fictive nommée Le Donjon du Kraken. Grâce à la mise en place
+                        d'une
                         session
                         utilisateur, le site offre la possibilité de réserver plusieurs événements simultanément. De
-                        plus, un courriel de confirmation est automatiquement envoyé à l'utilisateur dès la validation
+                        plus, un courriel de confirmation est automatiquement envoyé à l'utilisateur dès la
+                        validation
                         de sa réservation.</p>
                     <div class="project-link">
                         <div class="link-left">
@@ -481,8 +467,12 @@
                             interactifs
                             web</span>. Je suis disponible pour un stage d'une durée minimale de <span class="strong">11
                             semaines</span> à partir du 8 avril 2024.<br>
-                        N'hésitez pas à me contacter, je serai ravi de discuter avec vous de la manière dont je pourrais
+                        N'hésitez pas à me contacter, je serai ravi de discuter avec vous de la manière dont je
+                        pourrais
                         apporter de la valeur à votre entreprise.</p>
+                    <br><a href="./files/CV_Yannick_MIDEY.pdf" target="_blank" title="Voir mon CV" class="link">Voir
+                        mon
+                        CV</a>
                 </div>
             </div>
             <div class="contact-list">
