@@ -3,7 +3,7 @@
 
 /* Couleur en mode sombre */
 :root[data-theme="dark"] {
-    --text: #ece2f9;
+    --text: #f4edfd;
     --background: #110f13;
     --primary: #a564f5;
     --secondary: #7e679c;
@@ -18,7 +18,7 @@
 
 /* Couleur en mode clair */
 :root[data-theme="light"] {
-    --text: #1d1e30;
+    --text: #161722;
     --background: #f3edf8;
     --primary: #4c06a2;
     --secondary: #9179ac;
@@ -131,12 +131,17 @@ body {
 
 /* Ajout d'une margin pour chacune de mes sections */
 section {
-    margin: 0 55px 150px 55px;
+    margin: 0 3% 150px 3%;
 }
 
 /* Ajout d'un padding sur des sections spécifiques */
 #a-propos, #projects, #contact {
     padding-top: 50px;
+    margin-left: 5%;
+}
+
+#a-propos .resume-detail, #contact .contact-text {
+    margin-left: 1%;
 }
 
 /* Ajout d'une margin spécifique sur ma section contact */
@@ -153,7 +158,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 55px;
     padding-top: 15px;
     font-size: 1.4rem;
     font-weight: 800;
@@ -175,7 +179,7 @@ nav ul {
 nav li a {
     position: relative;
     text-decoration: none;
-    color: inherit;
+    color: var(--text);
     transition: margin 0.25s;
     text-transform: uppercase;
     display: flex;
@@ -416,7 +420,7 @@ nav .right li {
 #a-propos .resume .resume-content {
     display: flex;
     flex-direction: row;
-    gap: 270px;
+    gap: 15%;
 }
 
 #a-propos .resume .resume-content img {
@@ -571,7 +575,7 @@ nav .right li {
     border-radius: 50%;
     transition: transform 0.3s ease-out;
     transition: padding .2s ease-in-out;
-    opacity: .9;
+    opacity: 1;
     transform: scale(1.15);
     color: var(--background);
     padding: 25px 15px;
@@ -762,6 +766,10 @@ nav .right li {
         height: 300px;
     }
 
+    nav {
+        margin: 0 55px;
+    }
+
 }
 
 /* Affichez l'icône de menu si la largeur de l'écran est inférieure à 1020px */
@@ -783,7 +791,7 @@ nav .right li {
         display: none;
     }
 
-    nav {
+    nav .left {
         margin: 0 13px;
     }
 
