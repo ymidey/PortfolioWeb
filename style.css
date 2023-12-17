@@ -530,6 +530,7 @@ nav .right li {
 
 #projects .container-right p {
     line-height: 1.5;
+    font-size: 1.03rem;
 }
 
 #projects .project-link {
@@ -854,6 +855,7 @@ nav .right li {
 
     .contact-content {
         flex-wrap: wrap;
+        gap: 45px;
     }
 
     .Footer_blob-container, #animate-background {
