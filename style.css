@@ -658,7 +658,6 @@ nav .right li {
     rotate: -1deg;
 }
 
-
 .contact-list {
     display: flex;
     flex-direction: column;
@@ -773,9 +772,14 @@ nav .right li {
 
 }
 
+@media screen and (max-width: 1330px) {
+    .Footer_blob-container, #animate-background {
+        display: none;
+    }
+}
+
 /* Affichez l'icône de menu si la largeur de l'écran est inférieure à 1020px */
 @media screen and (max-width: 1020px) {
-
     .title {
         font-size: 2.3rem;
     }
@@ -858,7 +862,4 @@ nav .right li {
         gap: 45px;
     }
 
-    .Footer_blob-container, #animate-background {
-        display: none;
-    }
 }
