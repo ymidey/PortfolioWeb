@@ -124,7 +124,6 @@ body {
     background-color: var(--background);
     color: var(--text);
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Syne', sans-serif;
     overflow-x: hidden;
 }
