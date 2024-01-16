@@ -61,8 +61,8 @@ button {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    background-color: var(--primary);
-    color: #ece2f9;
+    background-color: #7D2AE2;
+    color: #fff;
     font-size: 1.2rem;
     font-weight: 800;
     padding: 1.3vh 1.3vw;
@@ -71,6 +71,7 @@ button {
     text-decoration: none;
     transition: all .2s ease-in-out;
     align-items: center;
+
 }
 
 
