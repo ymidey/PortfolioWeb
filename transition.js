@@ -146,17 +146,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const containerLeftImg = document.querySelectorAll(".container-left img");
 
-    containerLeftImg.forEach(e => {
-        e.addEventListener("mouseenter", function () {
-            cursor.classList.add("active");
-            cursor.textContent = "Voir le projet";
-        });
+    // containerLeftImg.forEach(e => {
+    //     e.addEventListener("mouseenter", function () {
+    //         cursor.classList.add("active");
+    //         cursor.textContent = "Voir le projet";
+    //     });
 
-        e.addEventListener("mouseleave", function () {
-            cursor.classList.remove("active");
-            cursor.textContent = "";
-        });
-    });
+    //     e.addEventListener("mouseleave", function () {
+    //         cursor.classList.remove("active");
+    //         cursor.textContent = "";
+    //     });
+    // });
 
 })
 
